@@ -1,0 +1,122 @@
+/*热门列表*/
+.hostlist ul li {    width: 20%;    float: left;    font-size: 0.2rem;    color: #222;    text-align: center;    overflow: hidden;    padding: 0.16rem 0rem;}
+.hotlibox img {    width: 0.68rem;    height: 0.68rem;    margin: 0 auto;}
+.hotlist-text {    font-size: 0.24rem;    /*color: #808080;*/    margin-top: 0.04rem;}
+.block-box {    overflow: hidden;}
+.none-box {    overflow: hidden;    display: none;}
+/*小列表*/
+.smalllist {    background: #FFFFFF;    overflow: hidden;    position: relative;}
+.small-box {    width: 25%;    float: left;    height: 100%;}
+.small-box img {    width: 0.8rem;    height: 0.8rem;    position: relative;    top: 0.3rem;    left: 25%;    min-width: 0.8rem;    max-width: 0.8rem;    display: inline-block;}
+.small-box a {    display: block;    font-size: 0.28rem;    color: #808080;    height: 100%;}
+.small-box a span {    font-size: 0.2rem;    color: #808080;    display: block;    text-align: center;    margin-top: 0.4rem;}
+.small-box .rightbox {    border-right: 0 none;}
+.hr1 {    width: 42%;    border-top: 2px solid #dedede;    position: absolute;    top: 0.76rem;    left: 0.3rem;}
+.hr2 {    width: 42%;    border-top: 2px solid #dedede;    position: absolute;    top: 0.76rem;    right: 0.3rem;}
+/*加盟网推荐*/
+.recommend p {    font-size: 0.3rem;    line-height: .90rem;    height: .90rem;    font-weight: 700;    float: left;}
+.recommend span {    color: #ff7f0e;    font-size: 14px;    line-height: .90rem;    height: .90rem;    display: block;    float: left;    width: 3.5rem;    overflow: hidden;    text-overflow: ellipsis;    white-space: nowrap;}
+.recommend span a {    color: #ff7f0e;    font-size: 14px;    line-height: .90rem;}
+#moocBox {    float: left;    margin-top: .30rem;    margin-left: 1.30rem;    height: .30rem;    line-height: .30rem;    overflow: hidden;    width: 3.5rem;    position: relative;}
+#moocBox ul li {    color: #ff7f0e;    font-size: 14px;    line-height: .30rem;    height: .30rem;    display: block;    float: left;    width: 3.5rem;    text-overflow: ellipsis;    white-space: nowrap;    overflow: hidden;}
+#moocBox ul li a {    color: #ff7f0e;    font-size: 0.28rem;    line-height: .30rem;}
+.nonetext {    display: none;}
+/*分类*/
+.category{    font-size: .26rem;    color: #666;    background: #F2F2F2;    overflow: hidden;}
+.category-pre{    /*background: #F2F2F2;*/    /*overflow: hidden;*/}
+.cy{    width: 19%;    height: .52rem;    line-height: .52rem;    margin:.12rem 2.4%;    border-radius: .26rem;    text-align: center;    background: #F2F2F2;}
+/*.cy a{*//*color: #666;*//*}*/
+.btn-more{    width: 12%;    height: .76rem;    /*background: red;*/}
+.active{    background: #ff7113!important;    color: #fff;}
+.btn-more-icon{    width: .37rem;    height: .37rem;   margin: .2rem .25rem 0 0.1rem;}
+.related-tit {    line-height: 0.8rem;    color: #282828;    font-size:.28rem;    padding:0 .3rem;    overflow: hidden;}
+.related-tit > span{    display: block;    width: 1.1rem;    height: 0.27rem;    float: left;    margin-top: 0.2rem;}
+.related-tit > span.xptj{    background: url(../images/xinpintuijian.png) no-repeat center;    background-size: 100%;}
+.related-tit > span.jpxm{    background: url(../images/jinpinxiangmu.png) no-repeat center;    background-size: 100%;}
+.btn-one-more{    color: #999;    font-size:.24rem;}
+.ic-one-more{    width: .25rem;    height: .25rem;    margin-top: 0.2rem;    margin-left: 0.1rem;    background: url(../images/icon-huanyipi.png) no-repeat center;    background-size: 100%;    float: right;}
+.lookmore-box,.lookmore{    display: block;    height: 0.74rem;    width: 100%;}
+.lookmore {    background: #fff;}
+.newslist1 {    overflow: hidden;    background: #FFFFFF;    border-bottom: 1px solid #DEDEDE;    padding: 0.3rem 0;}
+.bd0{    border:0;}
+/*.newslist1:last-of-type{*/    /*border:0;*//*}*/
+.h120{    height: 1.2rem;}
+.newslist1 dt img{    width: 1.6rem;    height: 1.0rem;    border-radius: 0.1rem;}
+.mgr150{    margin-right: .15rem; display: inline-block; width: auto;}
+.newslist1 .dt-two1 .mip-layout-container{width: auto; display: inline-block;}
+.newslist1 dd .p-two{    font-size: 0.28rem;    color: #333333;    height: 0.3rem;    line-height: 0.28rem;    width: 5.8rem;    overflow: hidden;    text-overflow: ellipsis;    white-space: nowrap;    font-weight: 700;}
+.newslist1 dd .p1-two{    font-size: 0.24rem;    color: #666666;    height: 0.26rem;    line-height: 0.24rem;    width: 5.0rem;    overflow: hidden;    text-overflow: ellipsis;    white-space: nowrap;    margin-top: 0.1rem;}
+.newslist1 .span-two1{    margin-top: 0.1rem;    display: inline-block;}
+.newslist1 .dd-two{    float: none;}
+.newslist1 .dt-two img{    width: 1.8rem;    height: 1.12rem;    border-radius: 0.1rem; display: inline-block; max-width: 1.8rem; min-width: 1.8rem;}
+.newslist1 .dt-two{    float: left;    margin-top: 0.1rem;    margin-left: 0.1rem;}
+.newslist1 .dt-two1{    float: left;    margin-top: 0.1rem;    margin-left: 0rem;}
+.newslist-tit{    font-size: 0.26rem;    color: #282828;    /*height: 0.6rem;*/    line-height: 0.34rem;    width: 4rem;    padding-top:0.05rem;    float: left;    overflow: hidden;    text-overflow: ellipsis;    display: -webkit-box;    -webkit-line-clamp: 2;    -webkit-box-orient: vertical;}
+.newslist-text{    font-size: 0.24rem;    color: #666666;    height: 0.34rem;    line-height: 0.34rem;    width: 3.8rem;    overflow: hidden;    text-overflow: ellipsis;    white-space: nowrap;    padding-top:0.05rem;}
+.mgt15{    margin-top:0.15rem;}
+.opa0{    opacity:0;    filter: Alpha(Opacity=0);    height: 0.2rem!important;}
+.newslist-bj{    font-size: 0.2rem;    color: #999999;    height: 0.34rem;    line-height: 0.34rem;    width: 1.6rem;    text-overflow: ellipsis;    white-space: nowrap;    margin-top: 0.18rem;    display: block;    float: left;}
+.newslist-time{    font-size: 0.2rem;    color: #999999;    height: 0.34rem;    line-height: 0.34rem;    width: 1.8rem;    overflow: hidden;    text-overflow: ellipsis;    white-space: nowrap;    display: block;    float: left;    text-align: left;    margin-left: 0.1rem;}
+.newslist1 .publish{    font-size: 0.22rem;    color: #999999;    /*height: 0.32rem;*/    /*line-height: 0.32rem;*/    overflow: hidden;    width: 100%;    padding-top: 0.18rem;}
+.newslist1 .publish-text{    font-size: 0.2rem;    color: #999999;    height: 0.24rem;    line-height: 0.22rem;    padding-top:0;    width: 1.6rem;}
+.newslist1 .p-two {    font-size: 0.26rem;    color: #292929;    line-height: 0.34rem;    width: 5.8rem;}
+.newslist1 .p1-two{    width: 5.8rem;}
+.lxmore{    width: 100%;    height: 0.8rem;    line-height: 0.8rem;    font-size: 0.24rem;    text-align: center;    display: block;    position: relative;    margin-top: 0.2rem;}
+.lxmore a{    color: #ff9300;    display: block;}
+.lxmore i{    display: block;    width: 0.09rem;    height: 0.16rem;    background: url(../images/arrow-orange.png) no-repeat center;    background-size: 100%;    position: absolute;    top: 0.3rem;    right: 39%;}
+/*猜你喜欢*/
+.pdt10{    padding-top:10px;}
+.pdl-3{    padding-left:3%;}
+.pdr-3{    padding-right:3%;}
+.w-46{    width: 46%;}
+.bdb{    border-bottom: 1px solid #f2f2f2;}
+.ratio-box{    display: block;    width: 100%;    padding-top:50%;}
+.img-ctn{    position: relative;}
+.pro-img{    width: 100%;    height: 100%;}
+.pro-name{    height: .38rem;    width: 2.92rem;    overflow: hidden;    line-height: .38rem;    padding-top:.1rem;    font-size:.26rem;    color: #333;}
+.money{    font-size:.2rem;    color: #666;    height: .32rem;    line-height: .32rem;    padding-bottom: .12rem;}
+.money-num{    font-size:.26rem;    color: #ef1c1c;}
+.abs{    position: absolute;    top: 0;    left: 0;}
+.num{    font-size:.2rem;    padding-left:.02rem;    color: #fff;    transform:scale(0.8)}
+.triangle{    width: .39rem;    height: .39rem;      background-size: 8.05rem 5.01rem;}
+.next-page{    width: .2rem;    height: .32rem;     background-size: 8.05rem 5.01rem;    margin: .2rem;}
+/*一横条图文*/
+.title-box{    height: .68rem;    line-height: .68rem;    font-size:.24rem;    color: #ff7112;    text-indent:.12rem;    border-bottom:1px solid #F2F2F2;    border-top:1px solid #F2F2F2;    background: #fff;}
+.title-box a{    color: #ff7112;}
+.tabs-ctn .content{    display: none;    padding: 0 0.3rem;    margin-left: -0.24rem;    margin-bottom: -0.2rem;    overflow: hidden;}
+.news-content{    display: none;    padding: 0 0.3rem;    margin-bottom: -0.2rem;    overflow: hidden;}
+.tabs-ctn .content:nth-of-type(1),.news-content:nth-of-type(1){    display: block;}
+.content li{  background: #FFFFFF;    border-bottom: 1px solid #DEDEDE;    position: relative;    float: left;    width: 46%;    height: 2.6rem;    margin-left: 0.24rem;    margin-bottom: 0.2rem;    border-radius: 0.1rem;    box-shadow: 0 0.05rem 0.1rem rgba(0,0,0,0.1);}
+.content li img{    width: 100%;    height: 1.4rem;    display: block;    border-top-left-radius: 0.1rem;    border-top-right-radius: 0.1rem;}
+.content li p{    overflow: hidden;    padding: 0 0.08rem;}
+#pcontent li{height: auto; width: 100%; float: none;}
+.online-title{    color: #292929;    font-size: 0.26rem;    line-height: 0.3rem;    height: 0.3rem;    overflow: hidden;    text-overflow: ellipsis;    white-space: nowrap;    margin-top: 0.15rem;}
+.online-name{    color: #999;    font-size: 0.18rem;    line-height: 0.20rem;    height: 0.20rem;    margin-top: 0.08rem;    overflow: hidden;    text-overflow: ellipsis;    white-space: nowrap;}
+.rmb{    /*position: absolute;*/    top: 0.02rem;    left: -0.14rem;    font-size: 0.22rem;    line-height: 0.26rem;}
+.online-money{    color: #e50012;    font-size: 0.24rem;    line-height: 0.30rem;    margin-top: 0.12rem;    height: 0.30rem;    float: left;}
+.timespan{    height: 0.2rem;    line-height: 0.2rem;    float: right;    display: block;    margin-top: 0.18rem;    font-size: 0.2rem;    margin-right: 0.13rem;    color:#999;}
+/*新闻资讯  选项卡*/
+.news {    margin-top: 0.2rem;    background: #FFFFFF;}
+.favor-header-bar {    /*height: 0.7rem;*/    background: #FFFFFF;    line-height: 0.7rem;    /*margin-bottom: 0.02rem;*/    padding: 0 0.3rem;    overflow: hidden;    margin-top: 0.4rem;}
+.favor-header-bar ul li {    width: 25%;    height: 0.65rem;    float: left;    text-align: center;}
+.favor-header-bar ul li {    color: #666;    font-size: 0.26rem;    text-align: center;    position: relative;}
+.favor-header-bar ul li i{    display: block;    position: absolute;    bottom: 0;    left: 0.53rem;    width: 0.3rem;    height: 0.04rem;    background: #fff;    border-radius: 0.02rem;}
+.favor-header-bar ul li.on {    color: #dc0011;}
+.favor-header-bar ul li.on i{    background: #dc0011;}
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {    bottom: 0px;    left: 0;    width: 100%;    height: 30px;    line-height: 8px;}
+.content1 li {    background: #FFFFFF;    padding: 0 0.3rem;    position: relative;    overflow: hidden;}
+.online-name1{	color: #666666;    font-size: 0.22rem;    line-height: 0.30rem;    margin-bottom: 0.3rem;    overflow: hidden;}
+.adbigbox {    margin-top: 0.1rem;    padding: 0.14rem;    background: #FFFFFF;}
+.adboxtext {    background: #FFFFFF;    overflow: hidden;    /* border: 1px solid #E1E1E1; */}
+.adboxtext ul li {    /* padding: 0 0.04rem; */    /* padding-left: 6px; */    height: 0.4rem;    overflow: hidden;    border: 1px solid #E1E1E1;}
+.adboxtext ul li a {    display: block;    height: 0.4rem;    line-height: 0.4rem;    overflow: hidden;    width: 1.48rem;    font-size: 0.16rem;    box-sizing: border-box;    color: #999;    text-align: center;}
+.mgtop40{    margin-top: 40px;}
+.toggleshow{	height: 0.6rem;	line-height: 0.6rem;	background: #fff;	font-size: 0.26rem;	text-align: center;	color: #888;}
+.toggleclassdown{	max-height: 3.04rem;	overflow: hidden;}
+.recommend {    height: 0.88rem;    background: #FFFFFF;    padding-left: 0.2rem;}
+.recommend img {    display: block;    width: 1.4rem;  max-width: 1.4rem; min-width: 1.4rem;   height: 0.24rem;    float: left;    margin-right: 0.3rem;    margin-top: 0.32rem;}
+#moocBox {    float: left;    height: 40px;    line-height: 40px;    overflow: hidden;    width: 4rem;    margin: 0;    margin-top: 2px;}
+#moocBox ul li {    color: #4d4d4d;    font-size: 14px;    line-height: 0.88rem;    height: 40px;    display: block;    float: left;    width: 4rem;    text-overflow: ellipsis;    white-space: nowrap;    overflow: hidden;}
+#moocBox ul li a {    color: #4d4d4d;    font-size: 16px;    line-height: 40px;}
+.btn-one-more{    color: #999;    font-size:.24rem;}
+.ic-one-more{    width: .25rem;    height: .25rem;    margin-top: 0.25rem;    margin-left: 0.1rem;    background: url(../images/icon-huanyipi.png) no-repeat center;    background-size: 100%;    float: right;}

@@ -1,0 +1,44 @@
+/************************************列表***********************************/
+.type-sift {    padding: 17px 20px;    font: 14px/20px 'Microsoft YaHei';    color: #262626;}
+.box-shadow {    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .05);}
+.bg-ff {    background-color: #fff;}
+.type-sift dl {    min-height: 24px;    overflow: hidden;    position: relative;    padding: 5px 0 5px 80px;}
+.type-sift dt {    position: absolute;    left: 0;    top: 5px;    color: #8c8c8c;    line-height: 24px;}
+.type-sift dd a {    float: left;    padding: 0 12px;    height: 24px;    line-height: 24px;    background-color: transparent;    transition: all .15s linear;    margin: 2px;}
+.type-sift dd a:hover, .type-sift dd a.cur {    background-color: #ff552e;    color: #fff;    border-radius: 3px;}
+.paixu-nav {    height: 24px;    line-height: 24px;    padding: 14px 20px;}
+.paixu-nav h1 {    float: left;    font-size: 16px;    font-weight: 600;    margin-right: 15px;}
+.paixu-nav .px-btn {    float: left;}
+.paixu-nav .px-btn span {    float: left;    padding: 0 15px;    position: relative;}
+.paixu-nav .px-btn a {    font-size: 14px;    color: #595959;}
+.paixu-nav .px-btn span:after {    position: absolute;    top: 7px;    right: 0;    width: 1px;    height: 12px;    background-color: #e8e8e8;    content: '';}
+.paixu-nav .px-btn span.cur a {    color: #ff552e;    font-weight: 600;}
+.paixu-nav .px-btn a.iconfont {    padding-right: 15px;    position: relative;}
+.paixu-nav .px-btn a.iconfont:before {    content: "\e79a";    margin-top: -15px;}
+.paixu-nav .px-btn a.iconfont:before, .paixu-nav .px-btn a.iconfont:after {    position: absolute;    top: 50%;    right: -2px;    font-size: 8px;    color: #bfbfbf;}
+.xm-list-H224 {}
+.xm-list-H224 a{     color: #262626;     text-decoration: none;}
+.xm-list-H224 li {    float: left;    width: 690px;    height: 184px;    position: relative;    padding: 20px 20px 20px 160px;    background-color: #fff;    box-shadow: 0 1px 3px 0 rgba(0,0,0,.05);    transition: all .15s linear;    margin-top: 20px}
+.xm-list-H224 li .btn-duibi {    position: absolute;    top: 15px;    right: 15px;    display: none;    width: 60px;    height: 24px;    background-color: #bfbfbf;    border-radius: 3px;    line-height: 24px;    text-align: center;    color: #fff;    cursor: pointer;    transition: all .15s linear}
+.xm-list-H224 li .btn-duibi .icon-Contrast {    font-size: 14px;    margin: -3px 5px 0 0}
+.xm-list-H224 li .btn-duibi:hover {    background-color: #ff552e}
+.xm-list-H224 li .img-block {    position: absolute;    left: 20px;    top: 20px;    width: 120px;    height: 120px}
+.xm-list-H224 li .f20 {    font-size: 20px;    line-height: 30px;    height: 30px;    overflow: hidden}
+.xm-list-H224 li .info {    height: 20px;    margin: 6px 0}
+.xm-list-H224 li .info span {    float: left;    width: 185px;    height: 20px;    overflow: hidden;    position: relative}
+.xm-list-H224 li .info span:first-child {    padding-right: 20px}
+.xm-list-H224 li .info span:first-child:before {    position: absolute;    top: 3px;    right: 0;    width: 1px;    height: 14px;    background-color: #eee;    content: ''}
+.xm-list-H224 li .info span:last-child {    padding-left: 20px}
+.xm-list-H224 li p {    line-height: 24px;    height: 24px;    overflow: hidden;    color: #8c8c8c}
+.xm-list-H224 li:hover {    box-shadow: 0 15px 24px 0 rgba(0,0,0,.1);    transform: translateY(-5px)}
+.xm-list-H224 li:hover .btn-duibi {    display: block}
+.pagination {    height: 42px;    color: #666;    padding: 27px 0}
+.pagination li{display: inline-block;}
+.pagination li.disabled { padding: 5px;   display: inline-block;    min-width: 32px;    height: 32px;    line-height: 32px;    font-size: 14px;    background: #fff;    box-shadow: 0 1px 3px 0 rgba(0,0,0,.05);    margin: 0 5px;    color: #666;    text-align: center}
+.pagination li.active { padding: 5px;    display: inline-block;    min-width: 32px;    height: 32px;    line-height: 32px;    font-size: 14px;    background: #fff;    box-shadow: 0 1px 3px 0 rgba(0,0,0,.05);    margin: 0 5px;    color: #666;    text-align: center}
+.pagination li a {    display: inline-block;   padding: 5px;  min-width: 32px;    height: 32px;    line-height: 32px;    font-size: 14px;    background: #fff;    box-shadow: 0 1px 3px 0 rgba(0,0,0,.05);    margin: 0 5px;    color: #666;    text-align: center}
+.pagination li a:hover {    border-color: #ff552e;    color: #ff552e}
+.pagination li.active {    background-color: #ff552e;    border-color: #ff552e;    color: #fff}
+.pagination li .prev,.pagination .next {    position: relative;    top: 1px;    font-size: 18px;    font-family: "\5B8B\4F53";    font-weight: 700}
+.pagination li a.disabled {    color: #ddd}
+.s-c999 {    color: #999}
