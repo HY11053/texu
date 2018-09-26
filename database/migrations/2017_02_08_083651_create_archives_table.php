@@ -17,7 +17,7 @@ class CreateArchivesTable extends Migration
             $table->increments('id');
             $table->integer('typeid');
             $table->integer('ismake');
-            $table->integer('brandid');
+            $table->integer('brandid')->nullable();
             $table->integer('click');
             $table->string('title');
             $table->string('shorttitle')->nullable();

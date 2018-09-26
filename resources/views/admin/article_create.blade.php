@@ -317,13 +317,13 @@
 
 </div>
         <button onsubmit="return false;" onclick="getLocalData ()" class="btn btn-md bg-green">恢复内容</button>
-@if(count($errors) > 0)
-    <ul class="alert alert-danger">
-        @foreach($errors->all() as $error)
-            <li>{{ $error }}</li>
-        @endforeach
-    </ul>
-    @endif
+        @if(count($errors) > 0)
+        <ul class="alert alert-danger">
+            @foreach($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+        @endif
 <!-- /.row -->
 <script>
     function getLocalData () {
@@ -332,7 +332,6 @@
             body=ue.execCommand( "getlocaldata" );
             ue.setContent(body);
         }
-
     }
 </script>
 @stop
@@ -365,7 +364,7 @@
         }).on('filepreupload', function() {
             $('#kv-success-box').html('');
         }).on('fileuploaded', function(event, data) {
-            $('#kv-success-box').append(data.response.link);
+            $('#kv-success-box').html('上传成功！');
             $('#kv-success-modal').modal('show');
             $("#imagepics").val($("#imagepics").val()+data.response.link+',');
             console.log($("#imagepics").val())
@@ -373,6 +372,7 @@
             console.log('File sorted params', params);
             alert(111);
         }).on('filedeleted', function(event, key) {
+            console('111111111');
             console.log('Key = ' + key);
             arrs=key.split(',')
             $("#imagepics").val($("#imagepics").val().replace(arrs[1]+',',''));

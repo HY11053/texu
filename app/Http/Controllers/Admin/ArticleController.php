@@ -73,7 +73,6 @@ class ArticleController extends Controller
     {
         $request['brandid']= !empty($request['bdname'])?Brandarticle::where('brandname','like','%'.$request['bdname'].'%')->value('id'):0;
         $this->RequestProcess($request);
-        //dd($request->all());
         Archive::create($request->all());
         //百度相关数据提交
         $thisarticle=Archive::where('id',Archive::max('id'))->find(Archive::max('id'));

@@ -79,10 +79,6 @@
                         <i class="ion ion-bonfire text-red"></i>
                         今日品牌发布数：{{\App\AdminModel\Brandarticle::where('created_at','>',Carbon\Carbon::today())->where('created_at','<',\Carbon\Carbon::tomorrow())->count()}}
                     </span>
-                    <span style="margin-left: 5px; display: inline-block;">
-                        <i class="ion ion-bonfire text-red"></i>
-                        今日产品发布数：{{\App\AdminModel\Production::where('created_at','>',Carbon\Carbon::today())->where('created_at','<',\Carbon\Carbon::tomorrow())->count()}}
-                    </span>
                     <span style=" margin-left: 5px;isplay: inline-block;">
                         <i class="ion ion-ios-pulse text-red"></i>
                         今日电话提交数：{{\App\AdminModel\Phonemanage::where('created_at','<',\Carbon\Carbon::now())->where('created_at','>',\Carbon\Carbon::yesterday())->count()}}
@@ -124,7 +120,7 @@
                             @foreach($articleUsers as $articleUser)
                                 <div class="progress-group">
                                     <span class="progress-text">{{$articleUser}}</span>
-                                    <span class="progress-number"><b>{{(\App\AdminModel\Archive::where('created_at','>',\Carbon\Carbon::today())->where('created_at','<',\Carbon\Carbon::now())->where('write',$articleUser)->count() )+ (\App\AdminModel\Brandarticle::where('created_at','>',\Carbon\Carbon::today())->where('created_at','<',\Carbon\Carbon::now())->where('write',$articleUser)->count()) + (\App\AdminModel\Production::where('created_at','>',\Carbon\Carbon::today())->where('created_at','<',\Carbon\Carbon::now())->where('write',$articleUser)->count())}}</b>/45</span>
+                                    <span class="progress-number"><b>{{(\App\AdminModel\Archive::where('created_at','>',\Carbon\Carbon::today())->where('created_at','<',\Carbon\Carbon::now())->where('write',$articleUser)->count() )+ (\App\AdminModel\Brandarticle::where('created_at','>',\Carbon\Carbon::today())->where('created_at','<',\Carbon\Carbon::now())->where('write',$articleUser)->count())}}</b>/45</span>
 
                                     <div class="progress sm">
                                         <div class="progress-bar progress-bar-{{$colorStyle[rand(0,4)]}}" style="width: {{sprintf("%.4f",((\App\AdminModel\Archive::where('created_at','>',\Carbon\Carbon::today())->where('created_at','<',\Carbon\Carbon::now())->where('write',$articleUser)->count())+(\App\AdminModel\Brandarticle::where('created_at','>',\Carbon\Carbon::today())->where('created_at','<',\Carbon\Carbon::now())->where('write',$articleUser)->count())+(\App\AdminModel\Production::where('created_at','>',\Carbon\Carbon::today())->where('created_at','<',\Carbon\Carbon::now())->where('write',$articleUser)->count()))/45,0,-1)*100}}%"></div>

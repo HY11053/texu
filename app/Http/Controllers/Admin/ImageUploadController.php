@@ -6,14 +6,13 @@ use App\AdminModel\Arctype;
 use App\Http\Requests\ImagesUploadRequest;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
 
 class ImageUploadController extends Controller
 {
-    /**
-     * 图片上传处理
-     * @param
-     *
-     * @return
+    /**图集异步上传处理
+     * @param ImagesUploadRequest $request
+     * @return string
      */
     function ImagesUpload(ImagesUploadRequest $request)
     {
@@ -21,23 +20,18 @@ class ImageUploadController extends Controller
             if(!$request->hasFile('input-image')){
                 exit('上传文件为空！');
             }else{
+                $storePath='public/uploads'.date('/Y/m/d',time());
                 $file = $request->file('input-image');
-                //判断文件上传过程中是否出错
                 $allowed_extensions = ["png", "jpg", "gif","jpeg"];
-                if ($file->getClientOriginalExtension() && !in_array($file->getClientOriginalExtension(), $allowed_extensions)) {
-                    exit(['error' => '您上传的图片文件格式不在ping,jpg,gif,jpeg范围之内']);
+                if ($file->getClientOriginalExtension() && !in_array($file->getClientOriginalExtension(), $allowed_extensions))
+                {
+                    exit('error You may only upload png, jpg jpeg or gif');
                 }
+                $extension = $file->getClientOriginalExtension();
+                $path = Storage::putFileAs($storePath, $file, md5(time()).'.'.$extension);
+                $litpic= '/storage'.ltrim($path,'public');
+                return json_encode(array('link'=>"$litpic"));
             }
-
-            $upload_path='images/thread'.date('/Y/m/d',time());
-            $destinationPath =public_path($upload_path);
-            $extension = $file->getClientOriginalExtension();
-            $fileName = md5(str_random(10)).'.'.$extension;
-            $file->move($destinationPath, $fileName);
-            $img_relpath=date('Y/m/d/',time()). $fileName;
-            $litpic= '/images/thread/'.$img_relpath;
-            return json_encode(array('link'=>"$litpic"));
-
         }
         var_dump($request->all());
     }
