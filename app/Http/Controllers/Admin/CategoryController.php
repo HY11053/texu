@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\AdminModel\Arctype;
+use App\Helpers\UploadImages;
 use App\Http\Requests\StoreCategoryRequest;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -27,9 +28,7 @@ class CategoryController extends Controller
             {
                 $recursivestypeinfos[$key]=$this->GetRecursiveType($key);
             }
-
         }
-
         return view('admin.category',compact('topnavs','recursivestypeinfos'));
     }
 
@@ -48,7 +47,6 @@ class CategoryController extends Controller
         {
             $topid=empty(Arctype::where('id',$id)->value('topid'))?$thisnavinfos->id:Arctype::where('id',$id)->value('topid');
         }
-        //dd($topid);
         return view('admin.category_create',compact('id','thisnavinfos','allnavinfos','topid'));
     }
 
@@ -64,7 +62,7 @@ class CategoryController extends Controller
         $requestdata=$request->all();
         if(array_key_exists('image',$requestdata))
         {
-            $requestdata['litpic']=$this->UploadImage($request);
+            $requestdata['litpic']=UploadImages::UploadImage($request,'image');
         }else{
             $requestdata['litpic']='';
         }
@@ -111,7 +109,7 @@ class CategoryController extends Controller
 
         if(array_key_exists('image',$requestdata))
         {
-            $requestdata['litpic']=$this->UploadImage($request);
+            $requestdata['litpic']=UploadImages::UploadImage($request,'image');
         }
         if($requestdata['dirposition']==1)
         {
@@ -189,30 +187,6 @@ class CategoryController extends Controller
         }
 
 
-    }
-    /**
-     * 缩略图上传
-     * @param $request请求信息
-     *
-     * @return 上传后图片地址
-     */
-    function UploadImage($request){
-        if(!$request->hasFile('image')){
-            return $img_relpath='';
-        }
-        $file = $request->file('image');
-        //判断文件上传过程中是否出错
-        $allowed_extensions = ["png", "jpg", "gif"];
-        if ($file->getClientOriginalExtension() && !in_array($file->getClientOriginalExtension(), $allowed_extensions)) {
-            exit(['error' => 'You may only upload png, jpg or gif.']);
-        }
-        $upload_path='images/thread'.date('/Y/m/d',time());
-        $destinationPath =public_path($upload_path);
-        $extension = $file->getClientOriginalExtension();
-        $fileName = md5(str_random(10)).'.'.$extension;
-        $file->move($destinationPath, $fileName);
-        $img_relpath='/images/thread/'.date('Y/m/d/',time()). $fileName;
-        return $img_relpath;
     }
 
     /**

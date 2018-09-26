@@ -74,15 +74,9 @@
                                 @if($typeinfos->mid==1)
                                     {{Form::radio('mid', '1', true,array('class'=>"flat-red",'checked'=>'checked'))}} 品牌类型
                                     {{Form::radio('mid', '0',false,array('class'=>"flat-red"))}} 普通文章
-                                    {{Form::radio('mid', '2',false,array('class'=>"flat-red"))}} 产品信息
-                                @elseif($typeinfos->mid==2)
-                                    {{Form::radio('mid', '1', true,array('class'=>"flat-red"))}} 品牌类型
-                                    {{Form::radio('mid', '0',false,array('class'=>"flat-red"))}} 普通文章
-                                    {{Form::radio('mid', '2',false,array('class'=>"flat-red",'checked'=>'checked'))}} 产品信息
-                                 @else
+                                @else
                                     {{Form::radio('mid', '1', true,array('class'=>"flat-red"))}} 品牌类型
                                     {{Form::radio('mid', '0',false,array('class'=>"flat-red",'checked'=>'checked'))}} 普通文章
-                                    {{Form::radio('mid', '2',false,array('class'=>"flat-red"))}} 产品信息
                                 @endif
                             </div>
                         </div>

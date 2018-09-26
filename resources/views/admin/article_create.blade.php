@@ -14,7 +14,6 @@
     <div class="col-md-12">
         <!-- The time line -->
         <ul class="timeline">
-
             <!-- timeline time label -->
             <li class="time-label">
                   <span class="bg-red">
@@ -89,31 +88,11 @@
                                 {{Form::text('bdname',null, array('class' => 'form-control','id'=>'keywords','placeholder'=>'所属品牌'))}}
                             </div>
                         </div>
-                        <div class="form-group col-md-12">
-                            {{Form::label('country', '地区信息', array('class' => 'control-label col-md-2 col-sm-3 col-xs-12'))}}
-                            <div class="col-md-4 col-sm-9 col-xs-12">
-                                {{Form::text('country',null, array('class' => 'form-control col-md-10','id'=>'country','placeholder'=>'填写地区名称即可','required'=>'required'))}}
-                            </div>
-                        </div>
-                        <div class="form-group col-md-12">
-                            {{Form::label('bdxg_search', '百度相关搜索', array('class' => 'control-label col-md-2 col-sm-3 col-xs-12'))}}
-                            <div class="col-md-4 col-sm-9 col-xs-12">
-                                {{Form::text('bdxg_search', null, array('class' => 'form-control col-md-10','id'=>'bdxg_search','placeholder'=>'百度相关搜索'))}}
-                            </div>
-                        </div>
                         <div class="form-group col-md-12 ">
                             {{Form::label('typeid', '文章所属栏目', array('class' => 'col-sm-2 control-label'))}}
-                            <div class="col-sm-5">
-                                {{Form::select('typeid', $allnavinfos, null,array('class'=>'form-control select2','style'=>'width: 78%'))}}
+                            <div class="col-md-4">
+                                {{Form::select('typeid', $allnavinfos, null,array('class'=>'form-control select2'))}}
                             </div>
-                        </div>
-                        <div class="form-group col-md-12 ">
-                            {{Form::label('original', '原创提交', array('class' => 'control-label col-md-2 col-sm-3 col-xs-12'))}}
-                            <div class="radio col-md-4 col-sm-9 col-xs-12">
-                                {{Form::radio('original', '1', false,array('class'=>'flat-red'))}} 是
-                                {{Form::radio('original', '0', true,array('class'=>'flat-red'))}}否
-                            </div>
-
                         </div>
                         <div class="form-group col-md-12 ">
                             {{Form::label('xiongzhang', '熊掌号推送', array('class' => 'control-label col-md-2 col-sm-3 col-xs-12'))}}
@@ -134,11 +113,10 @@
                                 {{Form::radio('ismake', '1', true,array('class'=>'flat-red'))}} 已审核
                                 {{Form::radio('ismake', '0', false,array('class'=>'flat-red'))}}未审核
                             </div>
-
                         </div>
                         <div class="form-group col-md-12 ">
                             {{Form::label('published_at', '预选发布时间', array('class' => 'control-label col-md-2 col-sm-3 col-xs-12'))}}
-                            <div class="input-group date  col-md-4 col-sm-9 col-xs-12">
+                            <div class="input-group date  col-md-4 " style="padding-right: 15px; padding-left: 15px;">
                                 <div class="input-group-addon">
                                     <i class="fa fa-calendar"></i>
                                 </div>
@@ -170,10 +148,8 @@
                 <i class="fa fa-user bg-yellow"></i>
 
                 <div class="timeline-item">
-                    <span class="time"><i class="fa fa-clock-o"></i> 27 mins ago</span>
-
+                    <span class="time"><i class="fa fa-clock-o"></i> {{Carbon\Carbon::now()}}</span>
                     <h3 class="timeline-header"><a href="#">产品信息</a> 产品信息描述</h3>
-
                     <div class="timeline-body">
                         <div class="row">
                             <div class="form-group col-md-6">
@@ -375,56 +351,39 @@
         });
     })
 </script>
-
+<script src="/js/fileinput.min.js"></script>
 <script>
     $(function () {
-        $('#datepicker').datepicker({
-            autoclose: true,
-            language: 'zh-CN',
-            todayHighlight: true
-        });
-        //iCheck for checkbox and radio inputs
-        $('.basic_info input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
-            checkboxClass: 'icheckbox_minimal-blue',
-            radioClass: 'iradio_minimal-blue'
-        });
-        //Red color scheme for iCheck
-        $('.basic_info input[type="checkbox"].minimal-red, input[type="radio"].minimal-red').iCheck({
-            checkboxClass: 'icheckbox_minimal-red',
-            radioClass: 'iradio_minimal-red'
-        });
-        //Flat red color scheme for iCheck
-        $('.basic_info input[type="checkbox"].flat-red, input[type="radio"].flat-red').iCheck({
-            checkboxClass: 'icheckbox_flat-green',
-            radioClass: 'iradio_flat-green'
+        $('#datepicker').datepicker({autoclose: true,language: 'zh-CN',todayHighlight: true });
+        $('.basic_info input[type="checkbox"].flat-red, input[type="radio"].flat-red').iCheck({ checkboxClass: 'icheckbox_flat-green', radioClass: 'iradio_flat-green'});
+        $("#input-image-1").fileinput({
+            uploadUrl: "/admin/upload/images",
+            allowedFileExtensions: ["jpg", "png", "gif"],
+            maxImageWidth: 3000,
+            maxFileCount: 6,
+            resizeImage: true
+        }).on('filepreupload', function() {
+            $('#kv-success-box').html('');
+        }).on('fileuploaded', function(event, data) {
+            $('#kv-success-box').append(data.response.link);
+            $('#kv-success-modal').modal('show');
+            $("#imagepics").val($("#imagepics").val()+data.response.link+',');
+            console.log($("#imagepics").val())
+        }).on('filepreremoved', function(e, params) {
+            console.log('File sorted params', params);
+            alert(111);
+        }).on('filedeleted', function(event, key) {
+            console.log('Key = ' + key);
+            arrs=key.split(',')
+            $("#imagepics").val($("#imagepics").val().replace(arrs[1]+',',''));
         });
     });
 </script>
 
 <!-- /Custom Notification -->
-<script src="/js/fileinput.min.js"></script>
+
 <script>
-    $("#input-image-1").fileinput({
-        uploadUrl: "/admin/upload/images",
-        allowedFileExtensions: ["jpg", "png", "gif"],
-        maxImageWidth: 3000,
-        maxFileCount: 6,
-        resizeImage: true
-    }).on('filepreupload', function() {
-        $('#kv-success-box').html('');
-    }).on('fileuploaded', function(event, data) {
-        $('#kv-success-box').append(data.response.link);
-        $('#kv-success-modal').modal('show');
-        $("#imagepics").val($("#imagepics").val()+data.response.link+',');
-        console.log($("#imagepics").val())
-    }).on('filepreremoved', function(e, params) {
-        console.log('File sorted params', params);
-        alert(111);
-    }).on('filedeleted', function(event, key) {
-        console.log('Key = ' + key);
-        arrs=key.split(',')
-        $("#imagepics").val($("#imagepics").val().replace(arrs[1]+',',''));
-    });
+
     $("#checktitle input").blur(function(){
         if ($("#checktitle input").val().length)
         {

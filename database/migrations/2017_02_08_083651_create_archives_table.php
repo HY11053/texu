@@ -24,13 +24,14 @@ class CreateArchivesTable extends Migration
             $table->string('bdname')->nullable();
             $table->string('flags')->nullable();
             $table->string('tags')->nullable();
-            $table->string('country')->nullable();
             $table->integer('mid')->default(0);//文档类型
             $table->string('keywords')->nullable();
             $table->string('description')->nullable();
             $table->string('write');
+            $table->string('editor')->nullable();
             $table->string('litpic')->nullable();
             $table->smallInteger('dutyadmin');
+            $table->smallInteger('editorid')->nullable();
             $table->mediumText('imagepics')->nullable();//品牌图集
             $table->text('body')->nullable();
             $table->timestamp('published_at')->nullable();//预选发布时间
@@ -43,6 +44,8 @@ class CreateArchivesTable extends Migration
             $table->index('mid');
             $table->index('write');
             $table->index('dutyadmin');
+            $table->index('editorid');
+            $table->index('editor');
             $table->index('published_at');
             $table->index('created_at');
         });

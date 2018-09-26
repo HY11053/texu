@@ -7,7 +7,7 @@ use Carbon\Carbon;
 
 class Archive extends Model
 {
-    protected $guarded = [];
+    protected $guarded = ['xiongzhang','image','updatetime'];
     protected $dates = ['published_at'];
 
     /**
@@ -49,6 +49,20 @@ class Archive extends Model
             $this->attributes['published_at'] = Carbon::createFromFormat('Y-m-d',$date);
         }else{
             $this->attributes['published_at'] =$date?$date : Carbon::now();
+        }
+    }
+
+    /**重复标题检测
+     * @param $title
+     */
+    public function setTitleAttribute($title)
+    {
+        //重复文档监测
+        if(Archive::where('title',$title)->where('created_at','>',Carbon::today())->value('id'))
+        {
+            exit('标题重复，禁止发布');
+        }else{
+            $this->attributes['title'] =$title;
         }
     }
 

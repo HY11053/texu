@@ -16,7 +16,7 @@ class UploadImages
      * 图像上传处理
      * @param $request数据
      *
-     * @return arraydatas
+     * @return pic_path
      */
     public static function UploadImage($request,$filename)
     {
@@ -26,11 +26,10 @@ class UploadImages
         }
         $storePath='public/uploads'.date('/Y/m/d',time());
         $file = $request->file($filename);
-        //判断文件类型
         $allowed_extensions = ["png", "jpg", "gif","jpeg"];
         if ($file->getClientOriginalExtension() && !in_array($file->getClientOriginalExtension(), $allowed_extensions))
         {
-            exit('error You may only upload png, jpg jpegor gif');
+            exit('error You may only upload png, jpg jpeg or gif');
         }
         $extension = $file->getClientOriginalExtension();
         $path = Storage::putFileAs($storePath, $file, md5(time()).'.'.$extension);
@@ -49,7 +48,7 @@ class UploadImages
         {
             $flags.=$value.',';
         }
-        return substr($flags,0,-1);
+        return rtrim($flags,',');
     }
 
 

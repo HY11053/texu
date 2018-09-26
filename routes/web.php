@@ -86,3 +86,7 @@ Route::get('{path}/page/{page}','Frontend\ListNewsController@listNews')->where('
 Route::get('{path}','Frontend\ListNewsController@listNews')->where('path','[a-zA-Z0-9/_]+')->name('newslist');
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

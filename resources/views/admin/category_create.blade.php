@@ -74,7 +74,6 @@
                             <div class="col-sm-5 basic_info">
                                 {{Form::radio('mid', '1', true,array('class'=>"flat-red"))}} 品牌类型
                                 {{Form::radio('mid', '0',false,array('class'=>"flat-red"))}} 普通文章
-                                {{Form::radio('mid', '2',false,array('class'=>"flat-red"))}} 产品信息
                             </div>
                         </div>
 
@@ -162,7 +161,6 @@
                     <!-- /.tab-pane -->
                     <div class=" tab-pane" id="activity">
                         @include('admin.layouts.summernote')
-                        <div style="display: none"><textarea  name="contents" id="lawsContent"></textarea></div>
                     </div>
                     <!-- /.tab-pane -->
                 </div>
@@ -196,47 +194,7 @@
     <script src="/adminlte/plugins/iCheck/icheck.min.js"></script>
     <script src="/js/fileinput.min.js"></script>
     <script>
-        $(document).ready(function() {
-            $.ajaxSetup({
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                }
-            });
-            $('#summernote').summernote({
-                height: 500,
-                lang : 'zh-CN',
-                callbacks: {
-                    onImageUpload: function(files) {
-                        //上传图片到服务器，使用了formData对象，至于兼容性...据说对低版本IE不太友好
-                        var formData = new FormData();
-                        formData.append('file',files[0]);
-                        $.ajax({
-                            type: 'POST',
-                            url : '/admin/upload/articleimages',//后台文件上传接口
-                            data : formData,
-                            enctype: 'multipart/form-data',
-                            processData : false,
-                            contentType : false,
-                            success: function(filename) {
-                                var file_path ='/images/thread/'+ filename;
-                                console.log(file_path);
-                                $('#summernote').summernote("insertImage", file_path);
-                            }
-                        });
-                    },
-                    onChange: function(contents, $editable) {
-                        // console.log('onChange:', contents, $editable);
-                        $("#lawsContent").val(contents)
-                        console.log($("#lawsContent").val())
-                    },
-                }
-            });
-        })
-
-    </script>
-    <script>
         $(function () {
-
             //iCheck for checkbox and radio inputs
             $('.basic_info input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
                 checkboxClass: 'icheckbox_minimal-blue',
@@ -271,7 +229,6 @@
             console.log($("#typeimages").val())
         }).on('filepreremoved', function(e, params) {
             console.log('File sorted params', params);
-            alert(111);
         }).on('filedeleted', function(event, key) {
             console.log('Key = ' + key);
             arrs=key.split(',')

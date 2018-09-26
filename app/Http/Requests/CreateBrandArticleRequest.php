@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CreateArticleRequest extends FormRequest
+class CreateBrandArticleRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -31,6 +31,15 @@ class CreateArticleRequest extends FormRequest
             'ismake'=>'required|numeric',
             //'published_at'=>'date',
             'mid'=>'numeric',
+            'decorationpay'=>'numeric',
+            'quartersrent'=>'numeric',
+            'equipmentcost'=>'numeric',
+            'workingcapital'=>'numeric',
+            'laborquarter'=>'numeric',
+            'miscellaneous'=>'numeric',
+            'dailyvolume'=>'numeric',
+            'unitprice'=>'numeric',
+            'watercoal'=>'numeric',
             'body'=>'required',
             'image'=> 'mimes:jpeg,jpg,gif,bmp,png|image'
         ];

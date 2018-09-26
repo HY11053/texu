@@ -87,7 +87,6 @@
                                         @endif
                                     </label>
                                 </div>
-
                             </div>
                             <div class="form-group col-md-12">
                                 {{Form::label('shorttitle', '简略标题', array('class' => 'control-label col-md-2 col-sm-3 col-xs-12'))}}
@@ -114,12 +113,6 @@
                                     {{Form::text('bdname',null, array('class' => 'form-control','id'=>'keywords','placeholder'=>'所属品牌'))}}
                                 </div>
                             </div>
-                            <div class="form-group col-md-12">
-                                {{Form::label('country', '地区信息', array('class' => 'control-label col-md-2 col-sm-3 col-xs-12'))}}
-                                <div class="col-md-4 col-sm-9 col-xs-12">
-                                    {{Form::text('country',null, array('class' => 'form-control col-md-10','id'=>'country','placeholder'=>'填写地区名称即可'))}}
-                                </div>
-                            </div>
                             <div class="form-group col-md-12 ">
                                 {{Form::label('updatetime', '更新发布时间', array('class' => 'control-label col-md-2 col-sm-3 col-xs-12'))}}
                                 <div class="radio col-md-4 col-sm-9 col-xs-12">
@@ -127,17 +120,10 @@
                                     {{Form::radio('updatetime', 0, true,array('class'=>'flat-red'))}}不更新
                                 </div>
                             </div>
-                            <div class="form-group col-md-12">
-                                {{Form::label('bdxg_search', '百度相关搜索', array('class' => 'control-label col-md-2 col-sm-3 col-xs-12'))}}
-                                <div class="col-md-4 col-sm-9 col-xs-12">
-                                    {{Form::text('bdxg_search', null, array('class' => 'form-control col-md-10','id'=>'bdxg_search','placeholder'=>'百度相关搜索'))}}
-                                </div>
-                            </div>
                             <div class="form-group col-md-12 ">
-                                {{Form::label('typeid', '文章所属栏目', array('class' => 'col-sm-2 control-label'))}}
-                                <div class="col-sm-5">
-
-                                    {{Form::select('typeid', $allnavinfos, null,array('class'=>'form-control select2','style'=>'width: 78%'))}}
+                                {{Form::label('typeid', '文章所属栏目', array('class' => ' col-md-2 control-label'))}}
+                                <div class="col-md-4">
+                                    {{Form::select('typeid', $allnavinfos, null,array('class'=>'form-control select2'))}}
                                 </div>
                             </div>
                             <div class="form-group col-md-12">
@@ -161,7 +147,7 @@
                             </div>
                             <div class="form-group col-md-12 ">
                                 {{Form::label('published_at', '预选发布时间', array('class' => 'control-label col-md-2 col-sm-3 col-xs-12'))}}
-                                <div class="input-group date  col-md-4 col-sm-9 col-xs-12">
+                                <div class="input-group date  col-md-4 " style="padding-right: 15px; padding-left: 15px;">
                                     <div class="input-group-addon">
                                         <i class="fa fa-calendar"></i>
                                     </div>

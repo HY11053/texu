@@ -40,7 +40,6 @@
                     <li @if(Request::getRequestUri()=='/admin/article/pendingaudit')class="active" @endif><a href="/admin/article/pendingaudit"><i class="fa fa-circle-o"></i> 等待审核文档</a></li>
                     <li @if(Request::getRequestUri()=='/admin/article/pedingpublished')class="active" @endif><a href="/admin/article/pedingpublished"><i class="fa fa-circle-o"></i> 待发布的文档</a></li>
                     <li @if(Request::getRequestUri()=='/admin/article/brands')class="active" @endif><a href="/admin/article/brands"><i class="fa fa-circle-o"></i> 品牌文档列表</a></li>
-                    <li @if(Request::getRequestUri()=='/admin/article/productlist')class="active" @endif><a href="/admin/article/productlist"><i class="fa fa-circle-o"></i> 产品文档列表</a></li>
                 </ul>
             </li>
             <li class="treeview">

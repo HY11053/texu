@@ -121,9 +121,9 @@
                             </div>
                             <div class="form-group col-md-12 ">
                                 {{Form::label('typeid', '文章所属栏目', array('class' => 'col-sm-2 control-label'))}}
-                                <div class="col-sm-5">
+                                <div class="col-md-4">
 
-                                    {{Form::select('typeid', $allnavinfos, null,array('class'=>'form-control select2','style'=>'width: 78%'))}}
+                                    {{Form::select('typeid', $allnavinfos, null,array('class'=>'form-control select2'))}}
                                 </div>
                             </div>
                             <div class="form-group col-md-12">
@@ -153,7 +153,7 @@
                             </div>
                             <div class="form-group col-md-12 ">
                                 {{Form::label('published_at', '预选发布时间', array('class' => 'control-label col-md-2 col-sm-3 col-xs-12'))}}
-                                <div class="input-group date  col-md-4 col-sm-9 col-xs-12">
+                                <div class="input-group date  col-md-4" style="padding-right: 15px; padding-left: 15px;">
                                     <div class="input-group-addon">
                                         <i class="fa fa-calendar"></i>
                                     </div>
@@ -445,11 +445,7 @@
                         </div>
                     </div>
                 </li>
-                @if($articleinfos->id >1339)
-                    @include('admin.layouts.brand_summernote')
-                @else
-                    @include('admin.layouts.brand_ueditor')
-                @endif
+                @include('admin.layouts.brand_summernote')
                 <li>
                     <i class="fa fa-clock-o bg-gray"></i>
                 </li>
