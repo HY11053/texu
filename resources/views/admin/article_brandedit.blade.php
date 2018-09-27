@@ -9,7 +9,7 @@
 @section('content')
     <!-- row -->
     <div class="row">
-        {{Form::model($articleinfos,array('route' =>array( 'article_edit','id'=>$id),'method' => 'put','files' => true,))}}
+        {{Form::model($articleinfos,array('route' =>array( 'brand_article_edit','id'=>$id),'method' => 'put','files' => true,))}}
         <div class="col-md-12">
             <!-- The time line -->
             <ul class="timeline">

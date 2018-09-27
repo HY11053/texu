@@ -20,6 +20,7 @@ class UploadImages
      */
     public static function UploadImage($request,$filename)
     {
+
         if(!$request->hasFile($filename))
         {
             return $img_relpath='';

@@ -141,65 +141,22 @@ class ArticleController extends Controller
      */
     function PostEdit(CreateArticleRequest $request,$id)
     {
-        if(isset($request['flags']))
-        {
-            $request['flags']=UploadImages::Flags($request['flags']);
-        }else{
-            $request['flags']='';
-        }
-        if($request['image'])
-        {
-            $request['litpic']=UploadImages::UploadImage($request,'image');
-            if(empty($request['flags'])){
-                $request['flags'].='p';
-            }else{
-                $request['flags'].=',p';
-            }
-        }elseif (isset($request['litpic']) && !empty($request['litpic']))
-        {
-            $request['litpic']=$request['litpic'];
-        }elseif (preg_match('/<[img|IMG].*?src=[\' | \"](.*?(?:[\.jpg|\.jpeg|\.png|\.gif|\.bmp]))[\'|\"].*?[\/]?>/i',$request['body'],$match)){
-            $request['litpic']=$match[1];
-            if(empty($request['flags']))
-            {
-                $request['flags'].='p';
-            }else{
-                $request['flags'].=',p';
-            }
-        }else{
-            $request['litpic']='';
-        }
-        if ($request['indexlitpic'])
-        {
-            $request['indexpic']=UploadImages::UploadImage($request,'indexlitpic');
-        }
-        $request['description']=(!empty($request['description']))?str_limit($request['description'],180,''):str_limit(str_replace(['&nbsp;',' ','　',PHP_EOL],'',strip_tags(htmlspecialchars_decode($request['body']))), $limit = 180, $end = '');
-        if (empty($request['imagepics']))
-        {
-            $request['imagepics']=' ';
-        }
-
+        $request['brandid']= !empty($request['bdname'])?Brandarticle::where('brandname','like','%'.$request['bdname'].'%')->value('id'):0;
+        $this->RequestProcess($request);
         if ($request->updatetime)
         {
             $request['created_at']=Carbon::now();
         }
-        if ($request->input('mid')==0)
-        {
-            $request['brandid']= !empty($request['bdname'])?Brandarticle::where('brandname','like','%'.$request['bdname'].'%')->value('id'):0;
-            $request['brandid']=!empty($request['brandid'])?$request['brandid']:0;
-            Archive::findOrFail($id)->update($request->all());
-            return redirect(action('Admin\ArticleController@Index'));
-        }elseif ($request->input('mid')==2)
-        {
-            $request['brandid']= !empty($request['bdname'])?Brandarticle::where('brandname','like','%'.$request['bdname'].'%')->value('id'):0;
-            $request['brandid']=!empty($request['brandid'])?$request['brandid']:0;
-            Production::findOrFail($id)->update($request->all());
-            return redirect(action('Admin\ArticleController@ProdctionList'));
-        }else{
-            $request['brandpay']=InvestmentType::where('id',$request->input('tzid'))->value('type');
-            Brandarticle::findOrFail($id)->update($request->all());
-            return redirect(action('Admin\ArticleController@Brands'));
-        }
+        Archive::findOrFail($id)->update($request->all());
+        return redirect(action('Admin\ArticleController@Index'));
+    }
+
+    public function PostBrandArticleEditor(CreateBrandArticleRequest $request,$id)
+    {
+        $this->RequestProcess($request);
+        $request['brandpay']=InvestmentType::where('id',$request->input('tzid'))->value('type');
+        Brandarticle::findOrFail($id)->update($request->all());
+        return redirect(action('Admin\ArticleController@Brands'));
     }
 
     /**
