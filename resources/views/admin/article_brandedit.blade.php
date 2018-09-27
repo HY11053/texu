@@ -178,7 +178,7 @@
                                 <img src="{{ $articleinfos->litpic }}" class="img-rounded img-responsive"/>
                             </div>
                             <div class="col-md-8 col-sm-12 col-xs-12">
-                                {{Form::file('image', array('class' => 'file col-md-10','id'=>'input-2','multiple data-show-upload'=>"false",'data-show-caption'=>"true"))}}
+                                {{Form::file('image', array('class' => 'file file-loading col-md-10','id'=>'input-2','multiple data-show-upload'=>"true",'data-show-caption'=>"true"))}}
                                 {{Form::hidden('litpic',null , array('class' => 'form-control col-md-10','id'=>'litpic'))}}
                             </div>
                             <div style="clear: both"></div>
