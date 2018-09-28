@@ -1,11 +1,10 @@
 @extends('admin.layouts.admin_app')
 @section('title')添加普通文档@stop
 @section('head')
-<link href="/adminlte/plugins/summernote/summernote.css" rel="stylesheet">
 <link href="/adminlte/plugins/iCheck/all.css" rel="stylesheet">
 <link rel="stylesheet" href="/adminlte//plugins/daterangepicker/daterangepicker.css">
 <link rel="stylesheet" href="/adminlte/plugins/datepicker/datepicker3.css">
-<link href="/adminlte/dist/css/fileinput.min.css" rel="stylesheet">
+<link href="/adminlte/plugins/bootstrap-fileinput/css/fileinput.min.css" rel="stylesheet">
 @stop
 @section('content')
         <!-- row -->
@@ -22,7 +21,6 @@
             </li>
             <!-- /.timeline-label -->
             <!-- timeline item -->
-
             <li>
                 <i class="fa fa-pencil-square bg-blue"></i>
 
@@ -138,7 +136,7 @@
                     <span class="time"><i class="fa fa-clock-o"></i> {{date('D M j')}}</span>
                     <h3 class="timeline-header no-border"><a href="#">缩略图处理</a> 图片上传</h3>
                     <div class="timeline-body">
-                        {{Form::file('image',  array('class' => 'file col-md-10','id'=>'input-2','multiple data-show-upload'=>'false','data-show-caption'=>'true'))}}
+                        {{Form::file('image', array('class' => 'file col-md-10','id'=>'input-2','multiple data-show-upload'=>"false",'data-show-caption'=>"true",'accept'=>'image/*'))}}
                     </div>
                 </div>
             </li>
@@ -265,7 +263,7 @@
                     <h3 class="timeline-header"><a href="#">图集处理</a> 批量上传图集</h3>
 
                     <div class="timeline-body">
-                        {{Form::file('image', array('name'=>'input-image','class' => 'file-loading','id'=>'input-image-1','accept'=>'image/*'))}}
+                        {{Form::file('image', array('name'=>'input-image','class' => 'file-loading','id'=>'input-image-1','multiple','accept'=>'image/*'))}}
                         <div id="kv-success-modal" class="modal fade">
                             <div class="modal-dialog">
                                 <div class="modal-content">
@@ -341,6 +339,8 @@
 <script src="/adminlte/plugins/iCheck/icheck.min.js"></script>
 <script src="/adminlte/plugins/datepicker/bootstrap-datepicker.js"></script>
 <script src="/adminlte/plugins/datepicker/locales/bootstrap-datepicker.zh-CN.js"></script>
+<script src="/adminlte/plugins/bootstrap-fileinput/js/fileinput.min.js"></script>
+<script src="/adminlte/plugins/bootstrap-fileinput/js/locales/zh.js"></script>
 <script>
     $(document).ready(function() {
         $.ajaxSetup({
@@ -350,29 +350,30 @@
         });
     })
 </script>
-<script src="/js/fileinput.min.js"></script>
 <script>
     $(function () {
         $('#datepicker').datepicker({autoclose: true,language: 'zh-CN',todayHighlight: true });
         $('.basic_info input[type="checkbox"].flat-red, input[type="radio"].flat-red').iCheck({ checkboxClass: 'icheckbox_flat-green', radioClass: 'iradio_flat-green'});
         $("#input-image-1").fileinput({
             uploadUrl: "/admin/upload/images",
-            allowedFileExtensions: ["jpg", "png", "gif"],
-            maxImageWidth: 3000,
+            allowedFileExtensions: ["jpg", "png", "gif",'jpeg'],
+            maxImageWidth: 1000,
             maxFileCount: 6,
-            resizeImage: true
+            language: 'zh',
+            resizeImage: true,
+            initialPreview: [
+            ],
+            initialPreviewConfig: [
+            ],
         }).on('filepreupload', function() {
             $('#kv-success-box').html('');
         }).on('fileuploaded', function(event, data) {
             $('#kv-success-box').html('上传成功！');
             $('#kv-success-modal').modal('show');
             $("#imagepics").val($("#imagepics").val()+data.response.link+',');
-            console.log($("#imagepics").val())
-        }).on('filepreremoved', function(e, params) {
-            console.log('File sorted params', params);
-            alert(111);
-        }).on('filedeleted', function(event, key) {
-            console('111111111');
+            $(".kv-file-remove").css("display:none")
+        }).on('filesuccessremove', function(event, key) {
+            console.log('event = ' + event);
             console.log('Key = ' + key);
             arrs=key.split(',')
             $("#imagepics").val($("#imagepics").val().replace(arrs[1]+',',''));
