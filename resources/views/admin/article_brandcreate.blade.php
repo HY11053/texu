@@ -4,8 +4,7 @@
     <link href="/adminlte/plugins/summernote/summernote.css" rel="stylesheet">
     <link href="/adminlte/plugins/iCheck/all.css" rel="stylesheet">
     <link rel="stylesheet" href="/adminlte//plugins/daterangepicker/daterangepicker.css">
-    <link rel="stylesheet" href="/adminlte/plugins/datepicker/datepicker3.css">
-    <link href="/adminlte/dist/css/fileinput.min.css" rel="stylesheet">
+    <link href="/adminlte/plugins/bootstrap-fileinput/css/fileinput.min.css" rel="stylesheet">
 @stop
 @section('content')
     <!-- row -->
@@ -72,12 +71,6 @@
                                     {{Form::text('keywords',null, array('class' => 'form-control','id'=>'keywords','placeholder'=>'文档关键词'))}}
                                 </div>
                             </div>
-                            <div class="form-group col-md-12">
-                                {{Form::label('country', '地区信息', array('class' => 'control-label col-md-2 col-sm-3 col-xs-12'))}}
-                                <div class="col-md-4 col-sm-9 col-xs-12">
-                                    {{Form::text('country',null, array('class' => 'form-control col-md-10','id'=>'country','placeholder'=>'填写地区名称即可','required'=>'required'))}}
-                                </div>
-                            </div>
                             <div class="form-group col-md-12 ">
                                 {{Form::label('typeid', '文章所属栏目', array('class' => 'col-sm-2 control-label'))}}
                                 <div class="col-md-4">
@@ -133,7 +126,7 @@
                         <span class="time"><i class="fa fa-clock-o"></i> {{date('D M j')}}</span>
                         <h3 class="timeline-header no-border"><a href="#">缩略图处理</a> 图片上传</h3>
                         <div class="timeline-body">
-                            {{Form::file('image',  array('class' => 'file col-md-10','id'=>'input-2','multiple data-show-upload'=>'false','data-show-caption'=>'true','accept'=>'image/*'))}}
+                            {{Form::file('image', array('class' => 'file col-md-10','id'=>'input-2','data-show-upload'=>"false",'data-show-caption'=>"true",'accept'=>'image/*'))}}
                         </div>
                     </div>
                 </li>
@@ -143,7 +136,7 @@
                         <span class="time"><i class="fa fa-clock-o"></i> {{date('D M j')}}</span>
                         <h3 class="timeline-header no-border"><a href="#">封面推荐缩略图</a> 图片上传</h3>
                         <div class="timeline-body">
-                            {{Form::file('indexlitpic',  array('class' => 'file col-md-10','id'=>'input-2','multiple data-show-upload'=>'false','data-show-caption'=>'true','accept'=>'image/*'))}}
+                            {{Form::file('indexlitpic', array('class' => 'file col-md-10','id'=>'input-2','data-show-upload'=>"false",'data-show-caption'=>"true",'accept'=>'image/*'))}}
                         </div>
                     </div>
                 </li>
@@ -371,9 +364,8 @@
                         <span class="time"><i class="fa fa-clock-o"></i> {{date('j, n,y')}}</span>
 
                         <h3 class="timeline-header"><a href="#">图集处理</a> 批量上传图集</h3>
-
                         <div class="timeline-body">
-                            {{Form::file('image', array('name'=>'input-image','class' => 'file-loading','id'=>'input-image-1','accept'=>'image/*'))}}
+                            {{Form::file('image', array('name'=>'input-image','class' => 'file-loading','id'=>'input-image-1','multiple','accept'=>'image/*'))}}
                             <div id="kv-success-modal" class="modal fade">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
@@ -422,66 +414,34 @@
     <script src="/adminlte/plugins/iCheck/icheck.min.js"></script>
     <script src="/adminlte/plugins/datepicker/bootstrap-datepicker.js"></script>
     <script src="/adminlte/plugins/datepicker/locales/bootstrap-datepicker.zh-CN.js"></script>
+    <script src="/adminlte/plugins/bootstrap-fileinput/js/fileinput.min.js"></script>
+    <script src="/adminlte/plugins/bootstrap-fileinput/js/locales/zh.js"></script>
     <script src="/adminlte/validator.js"></script>
     <script>
-        $(document).ready(function() {
-            $.ajaxSetup({
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                }
-            });
-        })
-    </script>
-
-    <script>
         $(function () {
-            $('#datepicker').datepicker({
-                autoclose: true,
-                language: 'zh-CN',
-                todayHighlight: true
-            });
-
-            //iCheck for checkbox and radio inputs
-            $('.basic_info input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
-                checkboxClass: 'icheckbox_minimal-blue',
-                radioClass: 'iradio_minimal-blue'
-            });
-            //Red color scheme for iCheck
-            $('.basic_info input[type="checkbox"].minimal-red, input[type="radio"].minimal-red').iCheck({
-                checkboxClass: 'icheckbox_minimal-red',
-                radioClass: 'iradio_minimal-red'
-            });
-            //Flat red color scheme for iCheck
-            $('.basic_info input[type="checkbox"].flat-red, input[type="radio"].flat-red').iCheck({
-                checkboxClass: 'icheckbox_flat-green',
-                radioClass: 'iradio_flat-green'
+            $('#datepicker').datepicker({autoclose: true,language: 'zh-CN',todayHighlight: true });
+            $('.basic_info input[type="checkbox"].flat-red, input[type="radio"].flat-red').iCheck({ checkboxClass: 'icheckbox_flat-green', radioClass: 'iradio_flat-green'});
+            $("#input-image-1").fileinput({
+                theme: 'fa',
+                uploadUrl: "/admin/upload/images",
+                allowedFileExtensions: ["jpg", "png", "gif",'jpeg'],
+                maxImageWidth: 1000,
+                minFileCount: 1,
+                maxFileCount: 6,
+                language: 'zh',
+                overwriteInitial: false,
+                resizeImage: true,
+                initialPreviewAsData: true,
+            }).on('fileuploaded', function(e, params) {
+                $('#kv-success-box').html('上传成功！');
+                $('#kv-success-modal').modal('show');
+                $('.kv-file-remove').hide();
+                $("#imagepics").val($("#imagepics").val()+params.response.src+',');
             });
         });
     </script>
 
-    <!-- /Custom Notification -->
-    <script src="/js/fileinput.min.js"></script>
     <script>
-        $("#input-image-1").fileinput({
-            uploadUrl: "/admin/upload/images",
-            allowedFileExtensions: ["jpg", "png", "gif"],
-            maxImageWidth: 300,
-            maxFileCount: 6,
-            resizeImage: true
-        }).on('filepreupload', function() {
-            $('#kv-success-box').html('');
-        }).on('fileuploaded', function(event, data) {
-            $('#kv-success-box').append(data.response.link);
-            $('#kv-success-modal').modal('show');
-            $("#imagepics").val($("#imagepics").val()+data.response.link+',');
-            console.log($("#imagepics").val())
-        }).on('filepreremoved', function(e, params) {
-            console.log('File sorted params', params);
-        }).on('filedeleted', function(event, key) {
-            console.log('Key = ' + key);
-            arrs=key.split(',')
-            $("#imagepics").val($("#imagepics").val().replace(arrs[1]+',',''));
-        });
         $("#checktitle input").blur(function(){
             if ($("#checktitle input").val().length)
             {

@@ -35,7 +35,15 @@
 <script src="/adminlte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
 <script src="/adminlte/dist/js/app.min.js"></script>
 <script src="/adminlte/dist/js/demo.js"></script>
-
+<script>
+    $(document).ready(function() {
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+    })
+</script>
 @yield('libs')
 </body>
 </html>

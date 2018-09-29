@@ -5,8 +5,7 @@
     <link href="/adminlte/plugins/iCheck/all.css" rel="stylesheet">
     <link rel="stylesheet" href="/adminlte//plugins/daterangepicker/daterangepicker.css">
     <link rel="stylesheet" href="/adminlte/plugins/datepicker/datepicker3.css">
-    <!--<link href="/adminlte/plugins/summernote/summernote-bs3.css" rel="stylesheet">-->
-    <link href="/adminlte/dist/css/fileinput.min.css" rel="stylesheet">
+    <link href="/adminlte/plugins/bootstrap-fileinput/css/fileinput.min.css" rel="stylesheet">
 @stop
 @section('content')
     <!-- row -->
@@ -172,7 +171,7 @@
                                 <img src="{{ $articleinfos->litpic }}" class="img-rounded img-responsive"/>
                             </div>
                             <div class="col-md-8 col-sm-12 col-xs-12">
-                                {{Form::file('image', array('class' => 'file col-md-10','id'=>'input-2','multiple data-show-upload'=>"false",'data-show-caption'=>"true"))}}
+                                {{Form::file('image', array('class' => 'file col-md-10','id'=>'input-2','data-show-upload'=>"false",'data-show-caption'=>"true",'accept'=>'image/*'))}}
                                 {{Form::hidden('litpic',null , array('class' => 'form-control col-md-10','id'=>'litpic'))}}
                             </div>
                             <div style="clear: both"></div>
@@ -300,11 +299,9 @@
 
                     <div class="timeline-item">
                         <span class="time"><i class="fa fa-clock-o"></i> {{date('j, n,y')}}</span>
-
                         <h3 class="timeline-header"><a href="#">图集处理</a> 批量上传图集</h3>
-
                         <div class="timeline-body">
-                            {{Form::file('image', array('name'=>'input-image','class' => 'file-loading','id'=>'input-image-1','accept'=>'image/*'))}}
+                            {{Form::file('image', array('name'=>'input-image','class' => 'file-loading','id'=>'input-image-1', 'multiple','accept'=>'image/*'))}}
                             <div id="kv-success-modal" class="modal fade">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
@@ -325,12 +322,9 @@
                 <!-- timeline item -->
                 <li>
                     <i class="fa fa-file-text bg-maroon"></i>
-
                     <div class="timeline-item">
                         <span class="time"><i class="fa fa-clock-o"></i> {{date('H:m:s')}}</span>
-
                         <h3 class="timeline-header"><a href="#">文档处理</a>文章内容编辑</h3>
-
                         <div class="timeline-body">
                         @include('admin.layouts.ueditor')
                             <!-- 编辑器容器 -->
@@ -341,13 +335,11 @@
                         </div>
                     </div>
                 </li>
-
                 <!-- END timeline item -->
                 <li>
                     <i class="fa fa-clock-o bg-gray"></i>
                 </li>
             </ul>
-
         </div>
         <!-- /.col -->
         {!! Form::close() !!}
@@ -359,8 +351,6 @@
             @endforeach
         </ul>
     @endif
-    <!-- /.row -->
-
     </section>
 @stop
 
@@ -369,32 +359,14 @@
     <script src="/adminlte/plugins/iCheck/icheck.min.js"></script>
     <script src="/adminlte/plugins/datepicker/bootstrap-datepicker.js"></script>
     <script src="/adminlte/plugins/datepicker/locales/bootstrap-datepicker.zh-CN.js"></script>
-    <script>
-        $(document).ready(function() {
-            $.ajaxSetup({
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                }
-            });
-        })
-    </script>
+    <script src="/adminlte/plugins/bootstrap-fileinput/js/fileinput.min.js"></script>
+    <script src="/adminlte/plugins/bootstrap-fileinput/js/locales/zh.js"></script>
     <script>
         $(function () {
             $('#datepicker').datepicker({
                 autoclose: true,
                 language: 'zh-CN',
                 todayHighlight: true
-            });
-
-            //iCheck for checkbox and radio inputs
-            $('.basic_info input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
-                checkboxClass: 'icheckbox_minimal-blue',
-                radioClass: 'iradio_minimal-blue'
-            });
-            //Red color scheme for iCheck
-            $('.basic_info input[type="checkbox"].minimal-red, input[type="radio"].minimal-red').iCheck({
-                checkboxClass: 'icheckbox_minimal-red',
-                radioClass: 'iradio_minimal-red'
             });
             //Flat red color scheme for iCheck
             $('.basic_info input[type="checkbox"].flat-red, input[type="radio"].flat-red').iCheck({
@@ -403,54 +375,43 @@
             });
         });
     </script>
-
-    <!-- /Custom Notification -->
-    <script src="/js/fileinput.min.js"></script>
     <script>
         $("#input-image-1").fileinput({
+            theme: 'fa',
             uploadUrl: "/admin/upload/images",
-            uploadAsync: true,
+            allowedFileExtensions: ["jpg", "png", "gif",'jpeg'],
+            maxImageWidth: 1000,
             minFileCount: 1,
             maxFileCount: 6,
+            language: 'zh',
             overwriteInitial: false,
+            resizeImage: true,
+            initialPreviewAsData: true,
             initialPreview: [
-                // IMAGE DATA
-                @if($pics[0]!=' ')
                 @foreach($pics as $pic)
                         "{{$pic}}",
-                // IMAGE DATA
                 @endforeach
-                @endif
             ],
-            initialPreviewAsData: true, // identify if you are sending preview data only and not the raw markup
-            initialPreviewFileType: 'image', // image is the default and can be overridden in config below
             initialPreviewConfig: [
-                @if($pics[0]!=" ")
-                    @foreach($pics as $indexnum=>$pic)
-                {caption: "{{$indexnum+1}}", size: 827000, width: "120px", url: "/admin/file-delete-batch", key: [ {{$indexnum+1}} ,'{{$pic}}',{{$articleinfos->id}}]},
+                @foreach($pics as $indexnum=>$pic)
+                {caption: "{{$indexnum+1}}", url: "/admin/file-delete-batch", key: ['{{$pic}}']},
                 @endforeach
-                @endif
-
             ],
             purifyHtml: true, // this by default purifies HTML data for preview
-            uploadExtraData: {
-                img_key: "1000",
-                img_keywords: "happy, places",
-            }
-        }).on('filesorted', function(e, params) {
-            alert(222);
-            console.log('File sorted params', params);
-        }).on('fileuploaded', function(event, data) {
-            $('#kv-success-box').append(data.response.link);
+        }).on('fileuploaded', function(e, params) {
+            $('#kv-success-box').html('上传成功！');
             $('#kv-success-modal').modal('show');
-            $("#imagepics").val($("#imagepics").val()+data.response.link+',');
-        }).on('filepreremoved', function(e, params) {
-            console.log('File sorted params', params);
-            alert(111);
+            $('.kv-file-remove').hide();
+            $("#imagepics").val($("#imagepics").val()+params.response.src+',');
+        }).on("filepredelete", function() {
+            var abort = true;
+            if (confirm("确定要删除此图片吗 此删除操作为异步操作,删除后图片不可恢复,删除后请及时提交")) {
+                abort = false;
+            }
+            return abort;
         }).on('filedeleted', function(event, key) {
-            console.log('Key = ' + key);
-            arrs=key.split(',')
-            $("#imagepics").val($("#imagepics").val().replace(arrs[1]+',',''));
+            $("#imagepics").val($("#imagepics").val().replace(key,''));
+            $("#imagepics").val($("#imagepics").val().replace(',,',','));
         });
     </script>
 @stop

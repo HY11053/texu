@@ -28,12 +28,11 @@ class ImageUploadController extends Controller
                     exit('error You may only upload png, jpg jpeg or gif');
                 }
                 $extension = $file->getClientOriginalExtension();
-                $path = Storage::putFileAs($storePath, $file, md5(time()).'.'.$extension);
+                $path = Storage::putFileAs($storePath, $file, md5(time()+rand(1500,2511)).'.'.$extension);
                 $litpic= '/storage'.ltrim($path,'public');
-                return json_encode(array('link'=>"$litpic"));
+                return json_encode(array('src'=>"$litpic"));
             }
         }
-        var_dump($request->all());
     }
     /**
      * 图片删除处理
@@ -42,16 +41,9 @@ class ImageUploadController extends Controller
      * @return
      */
     function DeletePics(Request $request){
-        $requestinfo=$request->input('key');
-        $arrinfos=explode(',',$requestinfo);
-        $imageslitpic=str_replace(',,',',',str_replace($arrinfos[1],'',Arctype::where('id',$arrinfos[2])->value('typeimages')));
-        Arctype::where('id', $arrinfos[2])->update(
-            [
-                'typeimages'=>$imageslitpic
-            ]);
-
-        return $arrinfos[0] ;
-
+        $imagePath=$request->input('key');
+        Storage::delete('public'.str_replace('/storage','',$imagePath));
+        return json_encode(array('key'=>"$imagePath"));;
     }
     /**
      * 图片上传

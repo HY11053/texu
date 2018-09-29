@@ -12,57 +12,32 @@ class Archive extends Model
 
     /**
      * 文档获取后时间格式转换
-     * @param date
-     *
+     * @param date     *
      * @return Carbon时间格式
-     */
-    public function getPublishedAtAttribute($date)
+     *    public function getPublishedAtAttribute($date)
     {
 
-        if (Carbon::now() > Carbon::parse($date)->addDays(10))
-        {
-           return date('Y-m-d',strtotime($date));
-        }
-
-        return Carbon::parse($date)->diffForHumans();
+    if (Carbon::now() > Carbon::parse($date)->addDays(10))
+    {
+    return date('Y-m-d',strtotime($date));
     }
+
+    return Carbon::parse($date)->diffForHumans();
+    }
+     */
+
+
     /**
      * 文档入库之前的时间格式转换
-     * @param date
-     *
-     * @return
+     * @param $date
      */
     public function setPublishedAtAttribute($date)
     {
-        /**if(!empty($date) && strpos($date, '/') !== false)
-        {
-            $newdate=explode('/',$date);
-            $this->attributes['published_at'] = Carbon::createFromFormat('Y-m-d',$newdate[2].'-'.$newdate[0].'-'.$newdate[1]);
-            $this->attributes['created_at'] = Carbon::createFromFormat('Y-m-d',$newdate[2].'-'.$newdate[0].'-'.$newdate[1]);
-        }else{
-            $this->attributes['published_at'] =$date?$date : Carbon::now();
-            //$this->attributes['created_at'] =$date?Carbon::createFromFormat('Y-m-d',date('Y-m-d',strtotime($date))) : Carbon::now();
-        }
-         * */
         if(!empty($date) && strpos($date,':')==false)
         {
             $this->attributes['published_at'] = Carbon::createFromFormat('Y-m-d',$date);
         }else{
             $this->attributes['published_at'] =$date?$date : Carbon::now();
-        }
-    }
-
-    /**重复标题检测
-     * @param $title
-     */
-    public function setTitleAttribute($title)
-    {
-        //重复文档监测
-        if(Archive::where('title',$title)->where('created_at','>',Carbon::today())->value('id'))
-        {
-            exit('标题重复，禁止发布');
-        }else{
-            $this->attributes['title'] =$title;
         }
     }
 

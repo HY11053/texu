@@ -33,7 +33,7 @@ class UploadImages
             exit('error You may only upload png, jpg jpeg or gif');
         }
         $extension = $file->getClientOriginalExtension();
-        $path = Storage::putFileAs($storePath, $file, md5(time()).'.'.$extension);
+        $path = Storage::putFileAs($storePath, $file, md5(time()+rand(1500,2511)).'.'.$extension);
         return '/storage'.ltrim($path,'public');
     }
     /**

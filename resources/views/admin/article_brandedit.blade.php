@@ -4,7 +4,7 @@
     <link href="/adminlte/plugins/iCheck/all.css" rel="stylesheet">
     <link rel="stylesheet" href="/adminlte//plugins/daterangepicker/daterangepicker.css">
     <link rel="stylesheet" href="/adminlte/plugins/datepicker/datepicker3.css">
-    <link href="/adminlte/dist/css/fileinput.min.css" rel="stylesheet">
+    <link href="/adminlte/plugins/bootstrap-fileinput/css/fileinput.min.css" rel="stylesheet">
 @stop
 @section('content')
     <!-- row -->
@@ -13,24 +13,16 @@
         <div class="col-md-12">
             <!-- The time line -->
             <ul class="timeline">
-
-                <!-- timeline time label -->
                 <li class="time-label">
                   <span class="bg-red">
                      {{date("M j, Y")}}
                   </span>
                 </li>
-                <!-- /.timeline-label -->
-                <!-- timeline item -->
-
                 <li>
                     <i class="fa fa-pencil-square bg-blue"></i>
-
                     <div class="timeline-item">
                         <span class="time"><i class="fa fa-clock-o"></i> {{date('H:i')}}</span>
-
                         <h3 class="timeline-header"><a href="#">文章基本信息|</a> 按需填写</h3>
-
                         <div class="timeline-body basic_info">
                             <div class="form-group col-md-12">
                                 {{Form::label('title', '文章标题', array('class' => 'control-label col-md-2 col-sm-3 col-xs-12'))}}
@@ -106,12 +98,6 @@
                                     {{Form::text('keywords',null, array('class' => 'form-control','id'=>'keywords','placeholder'=>'文档关键词'))}}
                                 </div>
                             </div>
-                            <div class="form-group col-md-12">
-                                {{Form::label('country', '地区信息', array('class' => 'control-label col-md-2 col-sm-3 col-xs-12'))}}
-                                <div class="col-md-4 col-sm-9 col-xs-12">
-                                    {{Form::text('country',null, array('class' => 'form-control col-md-10','id'=>'country','placeholder'=>'填写地区名称即可','required'=>'required'))}}
-                                </div>
-                            </div>
                             <div class="form-group col-md-12 ">
                                 {{Form::label('updatetime', '更新发布时间', array('class' => 'control-label col-md-2 col-sm-3 col-xs-12'))}}
                                 <div class="radio col-md-4 col-sm-9 col-xs-12">
@@ -122,7 +108,6 @@
                             <div class="form-group col-md-12 ">
                                 {{Form::label('typeid', '文章所属栏目', array('class' => 'col-sm-2 control-label'))}}
                                 <div class="col-md-4">
-
                                     {{Form::select('typeid', $allnavinfos, null,array('class'=>'form-control select2'))}}
                                 </div>
                             </div>
@@ -178,7 +163,7 @@
                                 <img src="{{ $articleinfos->litpic }}" class="img-rounded img-responsive"/>
                             </div>
                             <div class="col-md-8 col-sm-12 col-xs-12">
-                                {{Form::file('image', array('class' => 'file file-loading col-md-10','id'=>'input-2','multiple data-show-upload'=>"true",'data-show-caption'=>"true"))}}
+                                {{Form::file('image', array('class' => 'file col-md-10','id'=>'input-2','data-show-upload'=>"false",'data-show-caption'=>"true",'accept'=>'image/*'))}}
                                 {{Form::hidden('litpic',null , array('class' => 'form-control col-md-10','id'=>'litpic'))}}
                             </div>
                             <div style="clear: both"></div>
@@ -197,7 +182,7 @@
                                 <img src="{{ $articleinfos->indexpic }}" class="img-rounded img-responsive"/>
                             </div>
                             <div class="col-md-8 col-sm-12 col-xs-12">
-                                {{Form::file('indexlitpic', array('class' => 'file col-md-10','id'=>'input-2','multiple data-show-upload'=>"false",'data-show-caption'=>"true"))}}
+                                {{Form::file('indexpic', array('class' => 'file col-md-10','id'=>'input-2','data-show-upload'=>"false",'data-show-caption'=>"true",'accept'=>'image/*'))}}
                                 {{Form::hidden('indexpic',null , array('class' => 'form-control col-md-10','id'=>'litpic'))}}
                             </div>
                             <div style="clear: both"></div>
@@ -339,12 +324,9 @@
                 <!-- timeline item -->
                 <li>
                     <i class="fa   fa-recycle bg-yellow"></i>
-
                     <div class="timeline-item">
                         <span class="time"><i class="fa fa-clock-o"></i> 27 mins ago</span>
-
                         <h3 class="timeline-header"><a href="#">店铺成本</a> 店铺各项成本开支</h3>
-
                         <div class="timeline-body">
                             <div class="row">
                                 <div class="form-group col-md-6">
@@ -353,7 +335,6 @@
                                         {{Form::text('decorationpay',mt_rand (20000,50000), array('class' => 'form-control col-md-10','id'=>'decorationpay','placeholder'=>'装修费用'))}}
                                     </div>
                                 </div>
-
                                 <div class="form-group col-md-6">
                                     {{Form::label('quartersrent', '前两季度房租', array('class' => 'control-label col-md-2 col-sm-3 col-xs-12'))}}
                                     <div class="col-md-8 col-sm-9 col-xs-12">
@@ -402,7 +383,6 @@
                                         {{Form::text('watercoal', mt_rand (200,500), array('class' => 'form-control col-md-10','id'=>'watercoal','placeholder'=>'水电煤(元/月)'))}}
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                         <div class="timeline-footer">
@@ -421,14 +401,11 @@
                 <!-- timeline item -->
                 <li>
                     <i class="fa fa-camera bg-purple"></i>
-
                     <div class="timeline-item">
                         <span class="time"><i class="fa fa-clock-o"></i> {{date('j, n,y')}}</span>
-
                         <h3 class="timeline-header"><a href="#">图集处理</a> 批量上传图集</h3>
-
                         <div class="timeline-body">
-                            {{Form::file('image', array('name'=>'input-image','class' => 'file-loading','id'=>'input-image-1','accept'=>'image/*'))}}
+                            {{Form::file('image', array('name'=>'input-image','class' => 'file-loading','id'=>'input-image-1', 'multiple','accept'=>'image/*'))}}
                             <div id="kv-success-modal" class="modal fade">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
@@ -472,15 +449,8 @@
     <script src="/adminlte/plugins/iCheck/icheck.min.js"></script>
     <script src="/adminlte/plugins/datepicker/bootstrap-datepicker.js"></script>
     <script src="/adminlte/plugins/datepicker/locales/bootstrap-datepicker.zh-CN.js"></script>
-    <script>
-        $(document).ready(function() {
-            $.ajaxSetup({
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                }
-            });
-        })
-    </script>
+    <script src="/adminlte/plugins/bootstrap-fileinput/js/fileinput.min.js"></script>
+    <script src="/adminlte/plugins/bootstrap-fileinput/js/locales/zh.js"></script>
     <script>
         $(function () {
             $('#datepicker').datepicker({
@@ -488,66 +458,51 @@
                 language: 'zh-CN',
                 todayHighlight: true
             });
-            //iCheck for checkbox and radio inputs
-            $('.basic_info input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
-                checkboxClass: 'icheckbox_minimal-blue',
-                radioClass: 'iradio_minimal-blue'
-            });
-            //Red color scheme for iCheck
-            $('.basic_info input[type="checkbox"].minimal-red, input[type="radio"].minimal-red').iCheck({
-                checkboxClass: 'icheckbox_minimal-red',
-                radioClass: 'iradio_minimal-red'
-            });
             //Flat red color scheme for iCheck
             $('.basic_info input[type="checkbox"].flat-red, input[type="radio"].flat-red').iCheck({
                 checkboxClass: 'icheckbox_flat-green',
                 radioClass: 'iradio_flat-green'
             });
-
         });
     </script>
-
-    <!-- /Custom Notification -->
-    <script src="/js/fileinput.min.js"></script>
     <script>
         $("#input-image-1").fileinput({
+            theme: 'fa',
             uploadUrl: "/admin/upload/images",
-            uploadAsync: true,
+            allowedFileExtensions: ["jpg", "png", "gif",'jpeg'],
+            maxImageWidth: 1000,
             minFileCount: 1,
             maxFileCount: 6,
+            language: 'zh',
             overwriteInitial: false,
+            resizeImage: true,
+            initialPreviewAsData: true,
             initialPreview: [
-                // IMAGE DATA
                 @foreach($pics as $pic)
                     "{{$pic}}",
                 @endforeach
             ],
-            initialPreviewAsData: true, // identify if you are sending preview data only and not the raw markup
-            initialPreviewFileType: 'image', // image is the default and can be overridden in config below
             initialPreviewConfig: [
-                @foreach($pics as $indexnum=>$pic)
-                 {caption: "{{$indexnum+1}}", size: 827000, width: "120px", url: "/admin/file-delete-batch", key: [ {{$indexnum+1}} ,'{{$pic}}',{{$articleinfos->id}}]},
+                    @foreach($pics as $indexnum=>$pic)
+                {caption: "{{$indexnum+1}}", url: "/admin/file-delete-batch", key: ['{{$pic}}']},
                 @endforeach
-
             ],
             purifyHtml: true, // this by default purifies HTML data for preview
-            uploadExtraData: {
-                img_key: "1000",
-                img_keywords: "happy, places",
-            }
-        }).on('filesorted', function(e, params) {
-            console.log('File sorted params', params);
-        }).on('fileuploaded', function(event, data) {
-            $('#kv-success-box').append(data.response.link);
+        }).on('fileuploaded', function(e, params) {
+            $('#kv-success-box').html('上传成功！');
             $('#kv-success-modal').modal('show');
-            $("#imagepics").val($("#imagepics").val()+data.response.link+',');
-        }).on('filepreremoved', function(e, params) {
-            console.log('File sorted params', params);
+            $('.kv-file-remove').hide();
+            $("#imagepics").val($("#imagepics").val()+params.response.src+',');
+        }).on("filepredelete", function() {
+            var abort = true;
+            if (confirm("确定要删除此图片吗 此删除操作为异步操作,删除后图片不可恢复,删除后请及时提交")) {
+                abort = false;
+            }
+            return abort;
         }).on('filedeleted', function(event, key) {
-            console.log('Key = ' + key);
-            arrs=key.split(',')
-            $("#imagepics").val($("#imagepics").val().replace(arrs[1]+',',''));
+            $("#imagepics").val($("#imagepics").val().replace(key,''));
+            $("#imagepics").val($("#imagepics").val().replace(',,',','));
         });
-        </script>
+    </script>
 @stop
 

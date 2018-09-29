@@ -136,7 +136,7 @@
                     <span class="time"><i class="fa fa-clock-o"></i> {{date('D M j')}}</span>
                     <h3 class="timeline-header no-border"><a href="#">缩略图处理</a> 图片上传</h3>
                     <div class="timeline-body">
-                        {{Form::file('image', array('class' => 'file col-md-10','id'=>'input-2','multiple data-show-upload'=>"false",'data-show-caption'=>"true",'accept'=>'image/*'))}}
+                        {{Form::file('image', array('class' => 'file col-md-10','id'=>'input-2','data-show-upload'=>"false",'data-show-caption'=>"true",'accept'=>'image/*'))}}
                     </div>
                 </div>
             </li>
@@ -342,49 +342,30 @@
 <script src="/adminlte/plugins/bootstrap-fileinput/js/fileinput.min.js"></script>
 <script src="/adminlte/plugins/bootstrap-fileinput/js/locales/zh.js"></script>
 <script>
-    $(document).ready(function() {
-        $.ajaxSetup({
-            headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-            }
-        });
-    })
-</script>
-<script>
     $(function () {
         $('#datepicker').datepicker({autoclose: true,language: 'zh-CN',todayHighlight: true });
         $('.basic_info input[type="checkbox"].flat-red, input[type="radio"].flat-red').iCheck({ checkboxClass: 'icheckbox_flat-green', radioClass: 'iradio_flat-green'});
         $("#input-image-1").fileinput({
+            theme: 'fa',
             uploadUrl: "/admin/upload/images",
             allowedFileExtensions: ["jpg", "png", "gif",'jpeg'],
             maxImageWidth: 1000,
+            minFileCount: 1,
             maxFileCount: 6,
             language: 'zh',
+            overwriteInitial: false,
             resizeImage: true,
-            initialPreview: [
-            ],
-            initialPreviewConfig: [
-            ],
-        }).on('filepreupload', function() {
-            $('#kv-success-box').html('');
-        }).on('fileuploaded', function(event, data) {
+            initialPreviewAsData: true,
+        }).on('fileuploaded', function(e, params) {
             $('#kv-success-box').html('上传成功！');
             $('#kv-success-modal').modal('show');
-            $("#imagepics").val($("#imagepics").val()+data.response.link+',');
-            $(".kv-file-remove").css("display:none")
-        }).on('filesuccessremove', function(event, key) {
-            console.log('event = ' + event);
-            console.log('Key = ' + key);
-            arrs=key.split(',')
-            $("#imagepics").val($("#imagepics").val().replace(arrs[1]+',',''));
+            $('.kv-file-remove').hide();
+            $("#imagepics").val($("#imagepics").val()+params.response.src+',');
         });
     });
 </script>
 
-<!-- /Custom Notification -->
-
 <script>
-
     $("#checktitle input").blur(function(){
         if ($("#checktitle input").val().length)
         {

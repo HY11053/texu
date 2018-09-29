@@ -71,6 +71,10 @@ class ArticleController extends Controller
      */
     function PostCreate(CreateArticleRequest $request)
     {
+        if(Archive::where('title',$request->title)->where('created_at','>',Carbon::today())->value('id'))
+        {
+            exit('标题重复，禁止发布');
+        }
         $request['brandid']= !empty($request['bdname'])?Brandarticle::where('brandname','like','%'.$request['bdname'].'%')->value('id'):0;
         $this->RequestProcess($request);
         Archive::create($request->all());
@@ -97,6 +101,10 @@ class ArticleController extends Controller
 
     public function PostBrandArticle(CreateBrandArticleRequest $request)
     {
+        if(Brandarticle::where('title',$request->title)->where('created_at','>',Carbon::today())->value('id'))
+        {
+            exit('标题重复，禁止发布');
+        }
         $request['brandpay']=InvestmentType::where('id',$request->input('tzid'))->value('type');
         $this->RequestProcess($request);
         Brandarticle::create($request->all());
@@ -199,6 +207,8 @@ class ArticleController extends Controller
         if($request['indexlitpic']) {
             $request['indexpic'] = UploadImages::UploadImage($request, 'indexlitpic');
         }
+        //图集处理
+        $request['imagepics']=rtrim($request->input('imagepics'),',');
         return $request;
     }
     /**当前用户发布的文档
@@ -245,13 +255,10 @@ class ArticleController extends Controller
         if(auth('admin')->user()->id)
         {
             Archive::where('id',$id)->delete();
-            Addonarticle::where('id',$id)->delete();
             return '删除成功';
         }else{
             return '无权限执行此操作！';
         }
-
-
     }
 
     /**品牌文档删除
@@ -279,14 +286,6 @@ class ArticleController extends Controller
         $articles=Archive::where('title','like','%'.$request->input('title').'%')->latest()->paginate(30);
         return view('admin.article',compact('articles'));
     }
-
-    /**图集上传处理
-     * @param ImagesUploadRequest $request
-     */
-    function UploadImages(ImagesUploadRequest $request){
-        UploadImages::UploadImage($request);
-    }
-
 
 
     /** 栏目文章查看
@@ -343,10 +342,6 @@ class ArticleController extends Controller
         if (!$title)
         {
             $title=Brandarticle::where('title',$request->input('title'))->value('title');
-            if (!$title)
-            {
-                $title=Production::where('title',$request->input('title'))->value('title');
-            }
         }
         return $title?1:0;
     }
