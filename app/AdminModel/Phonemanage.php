@@ -9,5 +9,9 @@ class Phonemanage extends Model
 {
     use Notifiable;
     //
-    protected $fillable=['phoneno','name','gender','address','ip','note','host','referer'];
+    protected $guarded=[];
+    public function setPhonenoAttribute($phoneno)
+    {
+        $this->attributes['phoneno']=encrypt($phoneno);
+    }
 }

@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/adminlte/dist/css/AdminLTE.min.css">
     <link rel="stylesheet" href="/adminlte/dist/css/skins/_all-skins.min.css">
     <link rel="stylesheet" href="/adminlte/dist/css/skins/overwrite.min.css">
+    <link rel="stylesheet" href="/adminlte/plugins/jquery-toast-plugin/dist/jquery.toast.min.css">
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -35,6 +36,7 @@
 <script src="/adminlte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
 <script src="/adminlte/dist/js/app.min.js"></script>
 <script src="/adminlte/dist/js/demo.js"></script>
+<script src="/adminlte/plugins/jquery-toast-plugin/dist/jquery.toast.min.js"></script>
 <script>
     $(document).ready(function() {
         $.ajaxSetup({
@@ -42,7 +44,16 @@
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             }
         });
+        $.toast({
+            heading: '提示信息',
+            text: 'Loaders are enabled by default. Use `loader`, `loaderBg` to change the default behaviorLoaders are enabled by default. Use `loader`, `loaderBg` to change the default behavior',
+            icon: 'info',
+            loader: true,        // Change it to false to disable loader
+            loaderBg: '#9EC600' , // To change the background
+            position: 'bottom-right',
+        })
     })
+
 </script>
 @yield('libs')
 </body>
