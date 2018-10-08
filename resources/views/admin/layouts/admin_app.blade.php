@@ -46,11 +46,16 @@
         });
         $.toast({
             heading: '提示信息',
-            text: 'Loaders are enabled by default. Use `loader`, `loaderBg` to change the default behaviorLoaders are enabled by default. Use `loader`, `loaderBg` to change the default behavior',
+            text: [
+                'Fork the repository',
+                'Improve/extend the functionality',
+                'Create a pull request'
+            ],
             icon: 'info',
             loader: true,        // Change it to false to disable loader
             loaderBg: '#9EC600' , // To change the background
             position: 'bottom-right',
+            hideAfter: 15000,
         })
     })
 

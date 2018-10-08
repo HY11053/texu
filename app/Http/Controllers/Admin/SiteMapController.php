@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Admin;
 use App\AdminModel\Archive;
 use App\AdminModel\Arctype;
 use App\AdminModel\Brandarticle;
-use App\AdminModel\Production;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -29,7 +28,6 @@ class SiteMapController extends Controller
         $typedirs=Arctype::pluck('real_path');
         $newsurllinks=Archive::where('ismake',1)->orderBy('id','desc')->get();
         $brandlinks=Brandarticle::where('ismake',1)->orderBy('id','desc')->get();
-        $produtionlinks=Production::where('ismake',1)->orderBy('id','desc')->get();
         $mainsitemap="<?xml version=\"1.0\" encoding=\"UTF-8\"?>";
         $urlset='<urlset>';
         $urlset2='</urlset>';
@@ -102,33 +100,6 @@ class SiteMapController extends Controller
         $lastcontents='';
         $index=1;
         #------------------------------------------------------------------------------------------
-        for ($i=0;$i<count($produtionlinks);$i++)
-        {
-            $urlsets.="
-<url>
-    <loc>$appurl/item/{$produtionlinks[$i]->id}/</loc>
-    <lastmod>".date('Y-m-d',strtotime($produtionlinks[$i]->created_at))."</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-</url>
-            ";
-            if ($i!=0 && $i%1000==0)
-            {
-                $contents=$mainsitemap.$urlset.$urlsets.$urlset2;
-                Storage::disk('public')->append('sitemapitem'.$index.'.xml', $contents);
-                $index++;
-                $urlsets='';
-                $contents='';
-            }elseif($i>(int)(1000*(ceil(count($produtionlinks)/1000)-1))){
-                $lastcontents=$urlsets;
-            }
-        }
-        $contents=$mainsitemap.$urlset.$lastcontents.$urlset2;
-        Storage::disk('public')->append('sitemapitem'.$index.'.xml', $contents);
-        $urlsets='';
-        $contents='';
-        $lastcontents='';
-        $index=1;
         foreach ($typedirs as $typedir){
     $urlsets.="
 <url>

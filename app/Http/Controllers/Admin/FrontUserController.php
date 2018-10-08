@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\AdminModel\ChargeHistory;
 use App\Http\Requests\UserRegsiterRequest;
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class FrontUserController extends Controller
 {
@@ -70,7 +72,21 @@ class FrontUserController extends Controller
 
     function UserDelete($id)
     {
-        User::find($id)->delete();
-        return redirect(action('Admin\FrontUserController@Index'));
+        echo '禁止删除';
+        //User::find($id)->delete();
+        //return redirect(action('Admin\FrontUserController@Index'));
+    }
+
+    public function UserCharge()
+    {
+        $users=User::pluck('group','email');
+        return view('admin.usercharge',compact('users'));
+    }
+    public function PostUserCharge(Request $request)
+    {
+        $user=User::where('email',$request->user)->first();
+       User::where('email',$request->user)->update(['score'=>$request->score,'total_score'=>$user->total_score+$request->score,'remain_score'=>$user->remain_score+$request->score]);
+       ChargeHistory::create(['score'=>$request->score,'group'=>$user->group,'operater'=>auth('admin')->user()->name,'ip'=>$request->getClientIp()]);
+       return '充值成功';
     }
 }

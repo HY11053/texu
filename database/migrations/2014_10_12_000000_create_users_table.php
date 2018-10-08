@@ -18,8 +18,12 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
-            $table->ipAddress('ip');
-            $table->string('mobilephone');
+            $table->string('mobilephone')->nullable();
+            $table->string('group')->nullable();
+            $table->string('brandname')->nullable();
+            $table->integer('score')->default(0);//最近充值积分
+            $table->integer('remain_score')->default(0);//剩余积分
+            $table->integer('total_score')->default(0);//总积分
             $table->rememberToken();
             $table->timestamps();
         });

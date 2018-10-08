@@ -19,6 +19,12 @@
                             <th style="width: 10px">#ID</th>
                             <th>用户名</th>
                             <th>账号</th>
+                            <th>所属公司</th>
+                            <th>旗下品牌</th>
+                            <th>最近充值</th>
+                            <th>充值操作</th>
+                            <th>剩余积分</th>
+                            <th>总计充值</th>
                             <th>创建时间</th>
                             <th>更改时间</th>
                             <th>操作</th>
@@ -28,9 +34,15 @@
                             <td>{{$userlist->id}}.</td>
                             <td>{{$userlist->name}}</td>
                             <td>{{$userlist->email}}</td>
+                            <td>{{$userlist->group}}</td>
+                            <td>{{$userlist->brandname}}</td>
+                            <td>{{$userlist->score}}</td>
+                            <td>{{$userlist->email}}</td>
+                            <td>{{$userlist->remain_score}}</td>
+                            <td>{{$userlist->total_score}}</td>
                             <td>{{$userlist->created_at}}</td>
                             <td>{{$userlist->updated_at}}</td>
-                            <td class="newcolor"><span class="badge bg-green"><a href="/admin/user/edit/{{$userlist->id}}">编辑</a></span> <span class="badge bg-red"><a href="/admin/user/delete/{{$userlist->id}}">删除</a> </span></td>
+                            <td class="newcolor"><span class="badge bg-green"><a href="/admin/user/edit/{{$userlist->id}}">编辑</a></span></td>
                         </tr>
                        @endforeach
                     </table>

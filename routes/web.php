@@ -10,8 +10,8 @@
 | to using a Closure or controller method. Build something great!
 |
 */
-
-#Route::get('/home', 'HomeController@index');
+Auth::routes();
+Route::get('/home', 'HomeController@index');
 //前台界面
 Route::group(['domain' => 'm.xiuxianshipin.net'], function () {
     Route::get('/','Mobile\IndexController@Index');

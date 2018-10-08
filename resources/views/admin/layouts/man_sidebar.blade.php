@@ -91,7 +91,6 @@
                     <li @if(Request::getRequestUri()=='/admin/brandtypecreate')class="active"@endif><a href="/admin/brandtypecreate"><i class="fa fa-circle-o"></i> 品牌类型添加</a></li>
                     <li @if(Request::getRequestUri()=='/admin/importbrands')class="active"@endif><a href="/admin/importbrands"><i class="fa fa-circle-o"></i> 品牌数据导入</a></li>
                     <li @if(Request::getRequestUri()=='/admin/brandlists')class="active"@endif><a href="/admin/brandlists"><i class="fa fa-circle-o"></i> 品牌分类汇总</a></li>
-                    <li @if(Request::getRequestUri()=='/admin/worklinks')class="active"@endif><a href="/admin/worklinks"><i class="fa fa-circle-o"></i>  工作链接生成</a></li>
                     <li @if(Request::getRequestUri()=='/admin/investmentcreate')class="active"@endif><a href="/admin/investmentcreate"><i class="fa fa-circle-o"></i> 投资分类添加</a></li>
                     <li @if(Request::getRequestUri()=='/admin/investmentlist')class="active"@endif><a href="/admin/investmentlist"><i class="fa fa-circle-o"></i> 投资分类列表</a></li>
                     <li @if(Request::getRequestUri()=='/admin/acreagecreate')class="active"@endif><a href="/admin/acreagecreate"><i class="fa fa-circle-o"></i> 店铺面积添加</a></li>
@@ -173,7 +172,8 @@
                 <ul class="treeview-menu">
                     <li @if(Request::getRequestUri()=='/admin/userlist')class="active"@endif><a href="/admin/userlist"><i class="fa fa-circle-o"></i> 前台用户管理</a></li>
                     <li @if(Request::getRequestUri()=='/admin/useradd')class="active"@endif><a href="/admin/useradd"><i class="fa fa-circle-o"></i> 添加前台用户</a></li>
-                    <li @if(Request::getRequestUri()=='/admin/useradd')class="active"@endif><a href="/admin/useradd"><i class="fa fa-circle-o"></i> 会员充值记录</a></li>
+                    <li @if(Request::getRequestUri()=='/admin/user/charge')class="active"@endif><a href="/admin/user/charge"><i class="fa fa-circle-o"></i> 前台会员充值</a></li>
+                    <li @if(Request::getRequestUri()=='/admin/useradd')class="active"@endif><a href="/admin/user/charge"><i class="fa fa-circle-o"></i> 会员充值记录</a></li>
 
                 </ul>
             </li>

@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Admin;
 use App\AdminModel\Admin;
 use App\AdminModel\Archive;
 use App\AdminModel\Brandarticle;
-use App\AdminModel\Production;
 use App\Http\Requests\UserRegsiterRequest;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -91,8 +90,7 @@ class AdminController extends Controller
         Admin::where('name',auth('admin')->user()->name)->value('type')?:abort(403);
         $archiveUsers=array_unique(Archive::where('created_at','>',Carbon::today())->where('created_at','<',Carbon::now())->pluck('write')->toArray());
         $brandUsers=array_unique(Brandarticle::where('created_at','>',Carbon::today())->where('created_at','<',Carbon::now())->pluck('write')->toArray());
-        $productionUsers=array_unique(Production::where('created_at','>',Carbon::today())->where('created_at','<',Carbon::now())->pluck('write')->toArray());
-        $users=Admin::whereIn('name',array_unique(array_merge($archiveUsers,$brandUsers, $productionUsers)))->get();
+        $users=Admin::whereIn('name',array_unique(array_merge($archiveUsers,$brandUsers)))->get();
         return view('admin.users',compact('users'));
     }
 
