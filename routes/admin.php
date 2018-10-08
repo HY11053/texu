@@ -68,6 +68,7 @@ Route::group(['prefix' => 'admin'],function ()
     Route::get('user/edit/{id}','FrontUserController@UserEdit');
     Route::get('user/charge','FrontUserController@UserCharge');
     Route::put('user/charge','FrontUserController@PostUserCharge');
+    Route::get('user/charge-history','FrontUserController@UserChargeHistory');
     Route::put('user/edit/{id}','FrontUserController@PostUserEdit');
     Route::get('user/delete/{id}','FrontUserController@UserDelete');
     Route::get('ask','AskController@Index')->name('adminasklists');

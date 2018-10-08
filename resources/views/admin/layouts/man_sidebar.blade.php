@@ -173,7 +173,7 @@
                     <li @if(Request::getRequestUri()=='/admin/userlist')class="active"@endif><a href="/admin/userlist"><i class="fa fa-circle-o"></i> 前台用户管理</a></li>
                     <li @if(Request::getRequestUri()=='/admin/useradd')class="active"@endif><a href="/admin/useradd"><i class="fa fa-circle-o"></i> 添加前台用户</a></li>
                     <li @if(Request::getRequestUri()=='/admin/user/charge')class="active"@endif><a href="/admin/user/charge"><i class="fa fa-circle-o"></i> 前台会员充值</a></li>
-                    <li @if(Request::getRequestUri()=='/admin/useradd')class="active"@endif><a href="/admin/user/charge"><i class="fa fa-circle-o"></i> 会员充值记录</a></li>
+                    <li @if(Request::getRequestUri()=='/admin/user/charge-history')class="active"@endif><a href="/admin/user/charge-history"><i class="fa fa-circle-o"></i> 会员充值记录</a></li>
 
                 </ul>
             </li>

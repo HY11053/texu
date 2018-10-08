@@ -77,16 +77,30 @@ class FrontUserController extends Controller
         //return redirect(action('Admin\FrontUserController@Index'));
     }
 
+    /**前台会员充值界面
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function UserCharge()
     {
         $users=User::pluck('group','email');
         return view('admin.usercharge',compact('users'));
     }
+
+    /**前台会员充值操作
+     * @param Request $request
+     * @return string
+     */
     public function PostUserCharge(Request $request)
     {
         $user=User::where('email',$request->user)->first();
-       User::where('email',$request->user)->update(['score'=>$request->score,'total_score'=>$user->total_score+$request->score,'remain_score'=>$user->remain_score+$request->score]);
-       ChargeHistory::create(['score'=>$request->score,'group'=>$user->group,'operater'=>auth('admin')->user()->name,'ip'=>$request->getClientIp()]);
-       return '充值成功';
+        User::where('email',$request->user)->update(['score'=>$request->score,'total_score'=>$user->total_score+$request->score,'remain_score'=>$user->remain_score+$request->score]);
+        ChargeHistory::create(['score'=>$request->score,'group'=>$user->group,'operater'=>auth('admin')->user()->name,'ip'=>$request->getClientIp()]);
+        return '充值成功';
+    }
+
+    public function UserChargeHistory()
+    {
+        $chrageLitsts=ChargeHistory::paginate(30);
+        return view('admin.charge_histroy',compact('chrageLitsts'));
     }
 }
