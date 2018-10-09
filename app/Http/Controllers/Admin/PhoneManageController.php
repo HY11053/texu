@@ -39,8 +39,8 @@ class PhoneManageController extends Controller
     {
         $request['ip']=$request->getClientIp();
         Phonemanage::create($request->all());
-        event(new PhoneEvent(Phonemanage::latest() ->first()));
-        Admin::first()->notify(new MailSendNotification(Phonemanage::latest() ->first()));        
+        //event(new PhoneEvent(Phonemanage::latest() ->first()));
+        Admin::first()->notify(new MailSendNotification(Phonemanage::latest() ->first()));
         return redirect()->back();
     }
 

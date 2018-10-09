@@ -9,7 +9,7 @@ class Phonemanage extends Model
 {
     use Notifiable;
     //
-    protected $guarded=[];
+    protected $guarded=['id'];
     public function setPhonenoAttribute($phoneno)
     {
         $this->attributes['phoneno']=encrypt($phoneno);

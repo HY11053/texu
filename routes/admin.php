@@ -97,6 +97,7 @@ Route::group(['prefix' => 'admin'],function ()
     Route::get('makemsitemap','SiteMapController@MobileSitemap');
     Route::get('phone','PhoneManageController@Index');
     Route::post('phone/create','PhoneManageController@CreatePhoneManage');
+
     Route::get('phone/edit/{id}','PhoneManageController@PhoneManageEdit');
     Route::put('phone/edit/{id}','PhoneManageController@PhoneManageEditPost');
     Route::get('phone/delete/{id}','PhoneManageController@DeletePhone');
@@ -136,4 +137,7 @@ Route::group(['prefix' => 'admin'],function ()
     Route::get('acreage/edit/{id}','AcreageMentController@acreageMentEdit');
     Route::post('acreage/edit/{id}','AcreageMentController@postAcreageMentEdit');
     Route::get('/captcha/{config?}','CaptchasController@Captchas');
+});
+Route::get('phone',function(){
+    return view('phone');
 });

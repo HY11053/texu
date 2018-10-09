@@ -29,7 +29,7 @@
                         <tr>
                             <td>{{$adminlist->id}}.</td>
                             <td>{{$adminlist->name}}</td>
-                            <td>{{substr_replace($adminlist->phoneno,'***',3,3)}}</td>
+                            <td>{{substr_replace(decrypt($adminlist->phoneno),'***',3,3)}}</td>
                             <td>{{str_limit($adminlist->note,30,'')}}</td>
                            <td>{{$adminlist->host}}</td>
                            <td>{{$adminlist->ip}}</td>
