@@ -15,6 +15,7 @@
         "laravelcollective/html": "~5.0",
         "mews/captcha": "^2.1",
         "overtrue/laravel-ueditor": "~1.0",
+        "twbs/bootstrap": "3.1.1",
         "zhuzhichao/ip-location-zh": "^2.2"
     },
     "require-dev": {
