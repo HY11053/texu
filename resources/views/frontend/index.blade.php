@@ -1,407 +1,156 @@
-@extends('frontend.frontend')
-@section('title'){{config('app.webname')}}@stop
-@section('keywords'){{config('app.keywords')}}@stop
-@section('keywords'){{config('app.description')}}@stop
-@section('headlibs')
-    <link rel="stylesheet" href="/frontend/css/index.css" />
-@stop
-@section('main_content')
-    <!-- banner -->
-    <div class="zong_banner mt20">
-        <div class="clear banWrap wrap_mar">
-            <ul class="banWrap_left pr fl">
-                <li class="item"> <i class="zong_icon i21"></i><h3><a href="/blist/canyin_8_0_0_0/" title="餐饮加盟" target="_blank">餐饮加盟</a></h3></li>
-                <li class="item"> <i class="zong_icon i22"></i><h3><a href="/blist/tianpin_9_0_0_0/" title="甜品加盟" target="_blank">甜品加盟</a></h3></li>
-                <li class="item"> <i class="zong_icon i19"></i><h3><a href="/blist/tangguo_6_0_0_0/" title="糖果加盟" target="_blank">糖果加盟</a></h3></li>
-                <li class="item"> <i class="zong_icon i22"></i><h3><a href="/blist/sort_10_0_0_0/" title="面馆加盟" target="_blank">面馆加盟</a></h3></li>
-                <li class="item"> <i class="zong_icon i14"></i><h3><a href="/blist/lingshi_1_0_0_0" title="零食店加盟" target="_blank">零食店加盟</a></h3></li>
-                <li class="item"> <i class="zong_icon i16"></i><h3><a href="/blist/douzhipin_3_0_0_0/" title="豆制品加盟" target="_blank">豆制品加盟</a></h3></li>
-                <li class="item"> <i class="zong_icon i15"></i><h3><a href="/blist/jinkou_2_0_0_0/" title="进口食品加盟" target="_blank">进口食品加盟</a></h3></li>
-                <li class="item"> <i class="zong_icon i17"></i><h3><a href="/blist/guoren_4_0_0_0/" title="甜点糕点加盟" target="_blank">坚果果仁加盟</a></h3></li>
-                <li class="item"> <i class="zong_icon i18"></i><h3><a href="/blist/penghua_5_0_0_0/" title="膨化食品加盟" target="_blank">膨化食品加盟</a></h3></li>
-                <li class="item"> <i class="zong_icon i20"></i><h3><a href="/blist/roushi_7_0_0_0/" title="肉制品加盟" target="_blank">肉制品加盟</a></h3></li>
-                <li class="item"> <i class="zong_icon i15"></i><h3><a href="/blist/jinkou_2_0_0_0/" title="进口食品加盟" target="_blank">进口食品加盟</a></h3></li>
-                <li class="item"> <i class="zong_icon i17"></i><h3><a href="/blist/guoren_4_0_0_0/" title="甜点糕点加盟" target="_blank">坚果果仁加盟</a></h3></li>
-                <li class="item"> <i class="zong_icon i18"></i><h3><a href="/blist/penghua_5_0_0_0/" title="膨化食品加盟" target="_blank">膨化食品加盟</a></h3></li>
-            </ul>
-            <!-- banner 中间 -->
-            <div class="jm-index clearfix">
-                <div class="fl">
-                    <div class="carousel carousel-bar1">
-                        <div class="ovh swiper-container">
-                            <ul class="ban-ul swiper-wrapper">
-                                <a target="_blank" href="/brand/7/" class="item img-block swiper-slide"><img src="/frontend/images/9be32109eec0417d8e474437ed7fb0ea.jpg" alt="良品铺子"></a>
-                                <a target="_blank" href="/brand/1062/" class="item img-block swiper-slide"><img src="/frontend/images/aebed277ee964c94bfeaa080c0e0c64a.jpg" alt="一扫光"></a>
-                            </ul>
-                        </div>
-                        <div class="dot">
-                            <div class="swiper-pagination"></div>
-                        </div>
-                    </div>
-                    <dl class="fl char-type char-type-h172 mt20">
-                        @foreach($cbrands as $cbrand)
-                            <dd class="magnify @if(!$loop->last) mr20 @endif">
-                                <a target="_blank" href="/brand/{{$cbrand->id}}/" class="img-block magnify"><img src="{{$cbrand->indexpic}}" alt="" style="width:170px;height:170px">
-                                    <div class="txt">
-                                        <p class="f18">{{$cbrand->brandname}}</p>
-                                        <p class="f14">{{str_limit($cbrand->brandpsp,22,'...')}}</p>
-                                    </div>
-                                </a>
-                            </dd>
-                        @endforeach
-                    </dl>
+<!DOCTYPE html >
+<head>
+    <meta charset="utf-8" />
+    <meta name="baidu-site-verification" content="QyPoUuVwwf" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no,email=no,address=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="/favicon.ico" rel="icon" type="image/x-icon" />
+    <title>上海拉扎斯信息科技有限公司联系方式_信用报告_工商信息－启信宝</title>
+    <meta name="description" content="想了解上海拉扎斯信息科技有限公司联系方式,信用报告,工商信息,公司地址?用启信宝查看上海拉扎斯信息科技有限公司的工商信息,股东信息,主要人员,分支机构等详细信息,让您在选择上海拉扎斯信息科技有限公司前能够做到全面了解。" />
+    <meta name="keywords" content="上海拉扎斯信息科技有限公司联系方式,上海拉扎斯信息科技有限公司信用报告,上海拉扎斯信息科技有限公司公司地址,上海拉扎斯信息科技有限公司工商信息" />
+    <link rel="stylesheet" href="/frontend/css/common.css" />
+</head>
+<body>
+<!--M#s0-8-0-->
+<div class="app-top-bar">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-24 clearfix">
+                <div class="pull-left">
+                    <a class="small nav-link" href="javascript:;" data-placement="bottom" data-container="body" data-trigger="hover" data-toggle="popover" data-html="true" data-content="&lt;image width=140 height=140 src='//cache.qixin.com/pcweb/qrcode_weixin-4702170e.png' /&gt;" data-marko="{&quot;onmouseover&quot;:&quot;track s0-8-0 false 0&quot;}">欢迎访问中国特许网</a>
                 </div>
-                <div class="fr xm-qingxian">
-                    <h2>项目抢先看</h2>
-                    <div class="carousel xm-carousel">
-                        <div class="ovh swiper-container">
-                            <ul class="ban-ul swiper-wrapper">
-                                @foreach($hotbrandsearch as $hotbrandsearch)
-                                    <li class="item swiper-slide">
-                                        <div style="padding:0 20px">
-                                            <img src="{{$hotbrandsearch->litpic}}" width="190" height="190">
-                                            <p class="f16"> {{$hotbrandsearch->brandname}}</p>
-                                            <p class="f14">
-                                                投资金额：<b class="s-oe">{{$hotbrandsearch->brandpay}}</b>
-                                            </p>
-                                            <p class="h72">{{$hotbrandsearch->description}}</p>
-                                            <div class="btn-bar">
-                                                <a target="_blank" href="/brand/{{$hotbrandsearch->id}}/" class="btn btn-oe-line fl">详细考察</a><a href="javascript:void(0);" class="btn btn-oe fr btn-wyzx">我要咨询</a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                @endforeach
-                            </ul>
-                        </div>
-                        <div class="dot">
-                            <div class="swiper-pagination"></div>
-                        </div>
+                <div class="pull-right">
+                    <div class="btn-group nav-link">
+                        <a class="small nav-link" href="/" data-event-name="顶部菜单" data-event-props="{&quot;菜单&quot;:&quot;启信宝首页&quot;}">启信宝首页</a>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- main -->
-    <div class="fine navhotbox">
-        <div class="conta">
-            <div class="clearfix">
-                <div class="fine-left f-l">
-                    <div class="fine-left-top clearfix">
-                        <h4 class="f-l">精品推荐</h4>
-                        <ul class="f-li clearfix f-r" data-id="pc_jptj" data-type="cmsadpos">
-                            @foreach($topnavs as $topnav)
-                            <li><a href="/{{$topnav->real_path}}/" target="_blank">{{$topnav->typename}}</a></li>
-                            @endforeach
-                            <li><a href="/blist/all/" target="_blank">更多+</a></li>
+                    <div class="btn-group nav-link">
+                        <a class="small nav-link" href="http://e.qixin.com" data-event-name="顶部菜单" data-event-props="{&quot;菜单&quot;:&quot;进入企业版试用&quot;}">企业版试用</a>
+                    </div>
+                    <div class="btn-group nav-link">
+                        <a class="small nav-link" href="/user/media" data-event-name="顶部菜单" data-event-props="{&quot;菜单&quot;:&quot;媒体通道&quot;}">媒体通道</a>
+                    </div>
+                    <div class="btn-group nav-link">
+                        <a class="small nav-link" href="/user/office" data-event-name="顶部菜单" data-event-props="{&quot;菜单&quot;:&quot;商务合作&quot;}">商务合作</a>
+                    </div>
+                    <div class="btn-group nav-link">
+                        <a class="small nav-link" target="_blank" href="/api-introduce" data-event-name="顶部菜单" data-event-props="{&quot;菜单&quot;:&quot;API合作&quot;}">API合作</a>
+                    </div>
+                    <div class="btn-group nav-link">
+                        <a class="small nav-link" href="/members" data-event-name="进入会员服务页" data-event-props="{&quot;触发位置&quot;:&quot;顶部导航栏&quot;}">会员服务</a>
+                    </div>
+                    <div class="btn-group nav-link">
+                        <a class="small" data-toggle="dropdown"><i class="icon icon-login icon-left"></i><span class="user-name hidelong">清语</span><i class="icon icon-arrow_bottom icon-right"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/user/home/center" class="small margin-t-5px" data-event-name="顶部菜单" data-event-props="{&quot;菜单&quot;:&quot;会员中心&quot;}">会员中心</a></li>
+                            <li><a href="/user/claimed" class="small margin-t-5px" data-event-name="顶部菜单" data-event-props="{&quot;菜单&quot;:&quot;我的企业&quot;}">我的企业</a></li>
+                            <li><a href="/user/message" class="small margin-t-5px" data-event-name="顶部菜单" data-event-props="{&quot;菜单&quot;:&quot;消息中心&quot;}">消息中心</a></li>
+                            <li><a href="/user/order" class="small margin-t-5px" data-event-name="顶部菜单" data-event-props="{&quot;菜单&quot;:&quot;我的订单&quot;}">我的订单</a></li>
+                            <li><a href="/user/attention" class="small margin-t-5px" data-event-name="顶部菜单" data-event-props="{&quot;菜单&quot;:&quot;收藏列表&quot;}">收藏列表</a></li>
+                            <li><a href="/user/monitor" class="small margin-t-5px" data-event-name="顶部菜单" data-event-props="{&quot;菜单&quot;:&quot;监控企业&quot;}">监控企业</a></li>
+                            <li><a href="/user/promotion" class="small margin-t-5px" data-event-name="顶部菜单" data-event-props="{&quot;菜单&quot;:&quot;软文推广&quot;}">软文推广</a></li>
+                            <li class="divider"></li>
+                            <li><a href="javascript:;" class="small margin-t-5px" data-marko="{&quot;onclick&quot;:&quot;logout s0-8-0 false&quot;}">退出</a></li>
                         </ul>
                     </div>
-                    <div class="fine-left-bottom clearfix">
-                        <div class="fine-left-bottomL f-l">
-                            <ul class="f-li clearfix" data-id="pc_a02_1" data-type="cmsadpos">
-                                <li class="li-first" style="position: relative;"><a target="_blank" href="/brand/{{$ctbrand->id}}/"><img  width="260" height="242" alt="{{$ctbrand->brandname}}" src="{{$ctbrand->indexpic}}" style=""></a></li>
-                                @foreach($otbrands as $otbrand)
-                                        <li><a target="_blank" href="/brand/{{$otbrand->id}}/"><img  alt="{{$otbrand->brandname}}" src="{{$otbrand->litpic}}" style=""></a></li>
-                                @endforeach
-                            </ul>
-                        </div>
-                        <div class="fine-left-bottomR f-r">
-                            <ul class="f-li clearfix" data-id="pc_a03_1" data-type="cmsadpos">
-                                @foreach($cbrandrs as $cbrandr)
-                                    <li>
-                                        <a  target="_blank" href="/brand/{{$cbrandr->id}}/"><img  width="174" height="140"  alt="" src="{{$cbrandr->indexpic}}" style=""></a>
-                                        <p>品牌名称：<span>{{$cbrandr->brandname}}</span></p>
-                                        <p>
-                                            <span>￥</span><span class="sq">{{$cbrandr->brandpay}}</span><a target="_blank" href="/brand/{{$cbrandr->id}}/">了解详情</a>
-                                        </p>
-                                    </li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    </div>
                 </div>
-            </div>
-            <div class="advment" data-id="pc_image1" data-type="cmsadpos">
-                <a href="#" title="豪客来" data-id="5773" data-type="cmsad" target="_blank"> <img class="lazy" width="1200" height="110" alt="豪客来" src="/frontend/images/702711.jpg" style="">
-                </a>
             </div>
         </div>
     </div>
-    <!--新品上线-->
-    <div class="fine navhotbox">
-        <div class="conta">
-            <div class="clearfix">
-                <div class="fine-left f-l">
-                    <div class="fine-left-top clearfix">
-                        <h4 class="f-l">新品上线</h4>
-                        <ul class="f-li clearfix f-r" data-id="pc_jptj" data-type="cmsadpos">
-                            @foreach($topnav2s as $topnav2)
-                                <li><a href="/{{$topnav2->real_path}}/" target="_blank">{{$topnav2->typename}}</a></li>
-                            @endforeach
-                        </ul>
-                    </div>
-                    <div class="fine-left-bottom clearfix">
-                        <div class="fine-left-bottomL f-l">
-                            <ul class="f-li clearfix" data-id="pc_a02_1" data-type="cmsadpos">
-                                <li class="li-first" style="position: relative;"><a target="_blank" href="/brand/{{$lbrand->id}}/"><img  width="260" height="242" alt="{{$lbrand->brandname}}" src="{{$lbrand->litpic}}" style=""></a></li>
-                                @foreach($latestbrandrs as $latestbrandr)
-                                    <li><a target="_blank" href="/brand/{{$latestbrandr->id}}/"><img  alt="{{$latestbrandr->brandname}}" src="{{$latestbrandr->litpic}}" style=""></a></li>
-                                @endforeach
-                            </ul>
-                        </div>
-                        <div class="fine-left-bottomR f-r">
-                            <ul class="f-li clearfix" data-id="pc_a03_1" data-type="cmsadpos">
-                                @foreach($latestbrands as $latestbrand)
-                                    <li>
-                                        <a  target="_blank" href="/brand/{{$latestbrand->id}}/"><img  width="174" height="140"  alt="" src="{{$latestbrand->litpic}}" style=""></a>
-                                        <span class="index_brandinfo"><a href="/brand/1278/" target="_blank">{{$latestbrand->brandname}}</a></span>
-                                    </li>
-                                @endforeach
-                            </ul>
+</div>
+<!--M/s0-8-0-->
+<!--M#s0-8-1-->
+<div class="app-search-bar">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-24 clearfix app-header-search">
+                <div class="left">
+                    <a href="/" class="logo-link"><img src="//cache.qixin.com/pcweb/logo-14f40d20.png" width="130" height="42" /></a>
+                </div>
+                <div class="middle">
+                    <div class="search">
+                        <div class="input-group app-search-btn" style="position:relative">
+                            <input type="text" class="form-control input tt-input" placeholder="请输入企业名、人名、产品名等关键词，多关键词用空格隔开，如：上海 平安" data-marko="{&quot;onkeyup&quot;:&quot;handleEnter s0-8-1-9 false&quot;,&quot;onclick&quot;:&quot;showTooltip s0-8-1-9 false&quot;}" />
+                            <i class="input-group-addon search-btn icon icon-search" data-marko="{&quot;onclick&quot;:&quot;handleSearch s0-8-1-9 false&quot;}"></i>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="advment" data-id="pc_image1" data-type="cmsadpos">
-                <a href="#" title="豪客来" data-id="5773" data-type="cmsad" target="_blank"> <img class="lazy" width="1200" height="110" alt="豪客来" src="/frontend/images/702711.jpg" style=""></a>
             </div>
         </div>
     </div>
-
-    <!--新品上线end-->
-    <!--项目大全-->
-    <div class="fine navhotbox">
-        <div class="conta">
-            <div class="fourth_floor">
-                <div class="fine-left-top clearfix">
-                    <h4 class="f-l">项目大全</h4>
+</div>
+<div class="menu">
+    <div class="menu_box">
+        <div class="header_menu show"><div class="tit">行业分类</div></div>
+        <ul class="menu_list">
+            <li><a href="/" target="_self">首页</a></li>
+            <li><a href="/blist/all/" target="_self">项目大全</a></li>
+            <li><a href="/nlist/1/" target="_self">加盟指南</a></li>
+            <li><a href="/nlist/2/" target="_self">投资分析</a></li>
+            <li><a href="/nlist/4/" target="_self">经营管理</a></li>
+            <li><a href="/bnlist/" target="_self">品牌新闻</a></li>
+            <li><a href="/paihangbang/" target="_blank">火爆指数排行榜</a></li>
+        </ul>
+    </div>
+</div>
+<div class="main">
+    <div class="path"><p>当前位置：<a href="/">首页</a>&gt; <a class="dq" href="http://www.xiuxianshipin.com/yuhuoguo/" title="鱼火锅">鱼火锅</a></p></div>
+    <div class="panel padder n-s nheader b-a" id="company-top">
+        <div class="row">
+            <div class="logo">
+                <div class="imgkuang">
+                    <img src="https://co-image.qichacha.com/CompanyImage/f2fe0dcdbfcd940eaadede2c0805fe50.jpg?x-oss-process=style/qcc_cmp" alt="上海卡哇伊实业有限公司" onerror="this.src='https://co-image.qichacha.com/CompanyImage/default.jpg'" />
                 </div>
-                <div class="fourth_floor_b">
-                    <div class="fourth_floor_b_b">
-                        <div class="fourth_floor_b_b_t">
-                            <a class="x_canyin" href="/blist/lingshi_1/">零食加盟</a> <span class="fourth_floor_b_b_h">热门：
-                                                   @foreach($clingshibrands as $clingshibrand) <a href="/brand/{{$clingshibrand->id}}/" target="_blank">{{$clingshibrand->brandname}}</a>@endforeach
-                                      </span>
-                        </div>
-                        <div class="fourth_floor_b_b_pic">
-                            <ul>
-                                @foreach($flingshibrands as $flingshibrand)
-                                <li>
-                                    <a href="/brand/{{$flingshibrand->id}}/" target="_blank"><img src="{{$flingshibrand->litpic}}" alt="{{$flingshibrand->brandname}}"></a>
-                                    <div class="fourth_floor_b_b_pic_title"><a href="/brand/{{$flingshibrand->id}}/" target="_blank">{{$flingshibrand->brandname}}</a></div>
-                                </li>
-                                @endforeach
-                            </ul>
-                        </div>
-
-                        <div class="fourth_floor_b_b_link">
-                            @foreach($alingshibrands as $alingshibrand)
-                            <a href="/brand/{{$alingshibrand->id}}/" target="_blank">{{$alingshibrand->brandname}}</a> <span>|</span>
-                            @endforeach
-                            <a href="/blist/lingshi_1/" target="_blank">更多&gt;&gt;</a>
-                        </div>
-                    </div>
-
-                    <div class="fourth_floor_b_b">
-                        <div class="fourth_floor_b_b_t"> <a class="x_jiaoyu" href="/blist/guoren_4/">炒货店加盟</a>
-                            <span class="fourth_floor_b_b_h">热门：
-                                @foreach($chaohuobrands as $chaohuobrand)<a href="/brand/{{$chaohuobrand->id}}/" target="_blank">{{$chaohuobrand->brandname}}</a>@endforeach
-                            </span>
-                        </div>
-                        <div class="fourth_floor_b_b_pic">
-                            <ul>
-                                @foreach($fchaohuobrands as $fchaohuobrand)
-                                <li>
-                                    <a href="/brand/{{$fchaohuobrand->id}}/" target="_blank"><img src="{{$fchaohuobrand->litpic}}" alt="{{$fchaohuobrand->brandname}}"></a>
-                                    <div class="fourth_floor_b_b_pic_title"><a href="/brand/{{$fchaohuobrand->id}}/" target="_blank">{{$fchaohuobrand->brandname}}</a></div>
-                                </li>
-                                @endforeach
-                            </ul>
-                        </div>
-
-                        <div class="fourth_floor_b_b_link">
-                            @foreach($achaohuobrands as $achaohuobrand)
-                             <a href="/brand/{{$achaohuobrand->id}}/" target="_blank">{{$achaohuobrand->brandname}}</a> <span>|</span>
-                            @endforeach
-                            <a href="/blist/guoren_4/" target="_blank">更多&gt;&gt;</a>
-                        </div>
-                    </div>
-
-                    <div class="fourth_floor_b_b">
-                        <div class="fourth_floor_b_b_t"> <a class="x_muying" href="/blist/jinkou_2/">进口零食</a>
-                            <span class="fourth_floor_b_b_h">热门：
-                                @foreach($cjinkoubrands as $cjinkoubrand)<a href="/brand/{{$cjinkoubrand->id}}" target="_blank">{{$cjinkoubrand->brandname}}</a>@endforeach
-                            </span>
-                        </div>
-                        <div class="fourth_floor_b_b_pic">
-                            <ul>
-                                @foreach($fjinkoubrands as $fjinkoubrand)
-                                <li>
-                                    <a href="/brand/{{$fjinkoubrand->id}}/" target="_blank"><img src="{{$fjinkoubrand->litpic}}" alt="{{$fjinkoubrand->brandname}}"></a>
-                                    <div class="fourth_floor_b_b_pic_title"><a href="/brand/{{$fjinkoubrand->id}}/" target="_blank">{{$fjinkoubrand->brandname}}</a></div>
-                                </li>
-                               @endforeach
-                            </ul>
-                        </div>
-
-                        <div class="fourth_floor_b_b_link">
-                            @foreach($ajinkoubrands as $ajinkoubrand)
-                            <a href="/brand/{{$ajinkoubrand->id}}/" target="_blank">{{$ajinkoubrand->brandname}}</a> <span>|</span>
-                            @endforeach
-                            <a href="/blist/jinkou_2/" target="_blank">更多&gt;&gt;</a>
-                        </div>
-                    </div>
-
-                    <div class="fourth_floor_b_b">
-                        <div class="fourth_floor_b_b_t">
-                            <a class="x_qiche" href="/blist/penghua_5/">膨化食品</a>
-                            <span class="fourth_floor_b_b_h">热门：
-                                @foreach($cpenghuabrands as $cpenghuabrand)<a href="/brand/{{$cpenghuabrand->id}}/" target="_blank">{{$cpenghuabrand->brandname}}</a>   @endforeach
-                            </span>
-                        </div>
-                        <div class="fourth_floor_b_b_pic">
-                            <ul>
-                                @foreach($fpenghuabrands as $fpenghuabrand)
-                                <li>
-                                    <a href="/brand/{{$fpenghuabrand->id}}/" target="_blank"><img src="{{$fpenghuabrand->litpic}}" alt="{{$fpenghuabrand->brandname}}"></a>
-                                    <div class="fourth_floor_b_b_pic_title"><a href="/brand/{{$fpenghuabrand->id}}/" target="_blank">{{$fpenghuabrand->brandname}}</a></div>
-                                </li>
-                                @endforeach
-                            </ul>
-                        </div>
-
-                        <div class="fourth_floor_b_b_link">
-                            @foreach($apenghuabrands as $apenghuabrand)
-                            <a href="/brand/{{$apenghuabrand->id}}/" target="_blank">{{$apenghuabrand->brandname}}</a> <span>|</span>
-                            @endforeach
-                            <a href="/blist/penghua_5/" target="_blank">更多&gt;&gt;</a> </div>
-                    </div>
+                <div class="m-t-xs">
+                    <a onclick="zhugeTrack('企业主页-认证企业',{'企业名称':'上海卡哇伊实业有限公司'});" class="btn-nrenzheng" href="/company_cert?companykey=f2fe0dcdbfcd940eaadede2c0805fe50&amp;companyname=%E4%B8%8A%E6%B5%B7%E5%8D%A1%E5%93%87%E4%BC%8A%E5%AE%9E%E4%B8%9A%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8" target="_blank"></a>
                 </div>
             </div>
-            <div class="advment" data-id="pc_image1" data-type="cmsadpos">
-                <a href="#" title="豪客来" data-id="5773" data-type="cmsad" target="_blank"> <img class="lazy" width="1200" height="110" alt="豪客来" src="/frontend/images/702711.jpg" style=""></a>
+            <div class="content">
+                <div class="row title">
+                    <h1>上海卡哇伊实业有限公司</h1>
+                    <span class="nstatus  text-success-lt m-l-xs">存续</span>
+                </div>
+                <div class="row">
+                    <span class="fc "> <span class="cdes">电话：</span> <span class="cvlu"> <span style="color: #000;"> <a data-toggle="modal" data-target="#loginModal" onclick="getCaptcha()"> 021-8033**** </a> </span> <a style="color: #128bed" data-toggle="modal" data-target="#loginModal" onclick="getCaptcha();zhugeTrack('企业主页-更多号码',{'企业名称':'上海卡哇伊实业有限公司'});" class="m-l-sm"> 更多号码 </a> </span> </span>
+                    <span class="cdes">官网：</span>
+                    <span class="cvlu "> <a onclick="zhugeTrack('企业主页-查看官网',{'企业名称':'上海卡哇伊实业有限公司'});" href="http://www.ysg.cn" class="" target="_blank" data-trigger="hover" data-toggle="tooltip" data-placement="right" title="" data-delay="500" rel="nofollow" data-original-title="进入官网"> http://www.ysg.cn </a> <a onclick="zhugeTrack('企业主页-流量分析',{'企业名称':'上海卡哇伊实业有限公司'});" style="color: #128bed;" class="m-l-xs" data-toggle="modal" data-target="#loginModal">流量分析 </a> </span>
+                </div>
+                <div class="row">
+                    <span class="fc "> <span class="cdes">邮箱：</span> <span class="cvlu"> <a onclick="zhugeTrack('企业主页-查看邮箱',{'企业名称':'上海卡哇伊实业有限公司'});" data-toggle="modal" data-target="#loginModal"> ***@qq.com </a> </span> </span>
+                    <span class="cdes">地址：</span>
+                    <span class="cvlu"> <a onclick="showMapModal('上海市宝山区上大路668号1幢594B','');zhugeTrack('企业主页-查看地址',{'企业名称':'上海卡哇伊实业有限公司'});" data-trigger="hover" data-toggle="tooltip" data-placement="right" title="" data-delay="500" data-original-title="查看地址"> 上海市宝山区上大路668号1幢594B</a> <a data-toggle="modal" data-target="#loginModal" onclick="getCaptcha();zhugeTrack('企业主页-附近公司',{'企业名称':'上海卡哇伊实业有限公司'});" style="color: #128bed" class="m-l-sm"> 附近公司</a> </span>
+                </div>
+                <div class="row">
+                    <span class="cdes">简介：</span>
+                    <span class="cvlu"> 上海卡哇伊实业有限公司（www.ysg.cn），是集产品研发、生产加工、外贸进出口及加盟拓展为一体的现代化新型… <a onclick="zhugeTrack('企业主页-查看简介',{'企业名称':$('#companyname').val()});" style="color: #128bed" data-toggle="modal" data-target="#jianjieModal">查看详情</a></span>
+                </div>
+                <div class="row dongtai  ">
+                    <a class="oxin" data-toggle="modal" data-target="#loginModal" onclick="getCaptcha();zhugeTrack('企业主页-查看股权穿透',{'企业名称':'上海卡哇伊实业有限公司'});">
+                        <div class="img">
+                            <img src="https://co-image.qichacha.com/CompanyImage/f2fe0dcdbfcd940eaadede2c0805fe50.jpg?x-oss-process=style/qcc_cmp" />
+                        </div>
+                        <div>
+                            <span class="cdes">股权穿透</span>
+                        </div>
+                        <div>
+                            <span class="text-gray">挖掘深层股权结构</span>
+                        </div> </a>
+                </div>
             </div>
+            <div class="company-action">
+                <a onclick="zhugeTrack('企业主页-递名片',{'企业名称':'上海卡哇伊实业有限公司'});" data-toggle="modal" data-target="#loginModal" class="c_iconDt ca_card"> <span></span>递名片 </a>
+                <a data-toggle="modal" data-target="#loginModal" onclick="pageAddCompare('f2fe0dcdbfcd940eaadede2c0805fe50');zhugeTrack('企业主页-对比企业',{'企业名称':'上海卡哇伊实业有限公司'});" class="c_iconDt ca_compare"> <span></span>对比 </a>
+                <a id="follow" data-flag="0" data-toggle="modal" data-target="#loginModal" onclick="getCaptcha();zhugeTrack('企业主页-关注企业',{'企业名称':'上海卡哇伊实业有限公司'});" class="c_iconDt ca_focus" title="关注公司"> <span></span>关注 </a>
+                <a href="javascript:;" data-toggle="modal" data-target="#loginModal" onclick="getCaptcha();zhugeTrack('企业主页-监控企业',{'企业名称':'上海卡哇伊实业有限公司'});" class="c_iconDt ca_jk"> <span></span>监控 </a>
+                <p class="m-t" title="上次更新日期：1天前" style="font-size: 15px;color: #444;position: absolute;right: 0px;"> <a class="m_bt_refresh" data-toggle="modal" data-target="#loginModal" onclick="getCaptcha();zhugeTrack('企业主页-更新数据',{'企业名称':'上海卡哇伊实业有限公司'});"> </a> 1天前更新 </p>
+            </div>
+        </div>
+        <div class="company-record">
+            <span>浏览：4436</span>
+            <a onclick="zhugeTrack('企业主页-认证企业',{'企业名称':'上海卡哇伊实业有限公司'});" class="text-warning pull-right" href="/company_cert?companykey=f2fe0dcdbfcd940eaadede2c0805fe50&amp;companyname=%E4%B8%8A%E6%B5%B7%E5%8D%A1%E5%93%87%E4%BC%8A%E5%AE%9E%E4%B8%9A%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8">编辑企业信息</a>
         </div>
     </div>
-    <!--排行榜-->
-
-
-    <div class="fine navhotbox">
-        <div class="conta">
-            <div class="clearfix">
-                <div class="fine-left f-l" style="height: 600px;">
-                    <div class="fine-left-top clearfix">
-                        <h4 class="f-l">品牌关注排行榜</h4>
-                        <ul class="f-li clearfix f-r" data-id="pc_jptj" data-type="cmsadpos">
-                            <li><a href="/pro/xc1/" target="_blank">小吃</a></li>
-                            <li><a href="/pro/hg/" target="_blank">火锅</a></li>
-                            <li><a href="/pro/hb/" target="_blank">汉堡</a></li>
-                            <li><a href="/pro/sg/" target="_blank">砂锅</a></li>
-                            <li><a href="/pro/mg1/" target="_blank">焖锅</a></li>
-                            <li><a href="/pro/kc/" target="_blank">快餐</a></li>
-                            <li><a href="/pro/ky/" target="_blank">烤鱼</a></li>
-                            <li><a href="/pro/gc/" target="_blank">贡茶</a></li>
-                            <li><a href="https://www.1616n.com/xmk/1_0_0.shtml" target="_blank">更多+</a></li>
-                        </ul>
-                    </div>
-                    <ul class="crunchies-list mt10 clearfix">
-                        @foreach($paihangbangs as $index=>$paihangbang)
-                        <li @if(($index+1)%6) class="" @endif><a href="/paihangbang/{{$paihangbang->real_path}}/"><img src="{{$paihangbang->litpic}}" /><p>{{$paihangbang->typename}}排行榜</p></a></li>
-                         @endforeach
-                            <div style="clear: both;"></div>
-                    </ul>
-                </div>
-            </div>
-            <div class="advment" data-id="pc_image1" data-type="cmsadpos">
-                <a href="#" title="豪客来" data-id="5773" data-type="cmsad" target="_blank"> <img class="lazy" width="1200" height="110" alt="豪客来" src="/frontend/images/702711.jpg" style=""></a>
-            </div>
-        </div>
-    </div>
-
-    <!--排行榜end-->
-
-    <!--项目大全end-->
-    <!--文档-->
-    <div class="bg-ff mt20">
-        <div class="w1200 clearfix mt20">
-            <div class="fl w360 mr40">
-                <div class="nav-h30 nav-h30-line-oe">
-                    <h3 class="f22">品牌新闻</h3>
-                    <a href="/bnlist/" class="fr s-c59">更多</a>
-                </div>
-                <ul class="tw-list tw-list-h72 mt10">
-                    @foreach($cnews as $cnew)
-                    <li><a href="/news/{{$cnew->id}}/" class="img-block magnify"><img src="{{$cnew->litpic}}" alt=""></a>
-                        <p class="f16">
-                            <a href="/news/{{$cnew->id}}/">{{$cnew->title}}</a>
-                        </p>
-                        <p class="f14 s-8c">
-                        {{$cnew->description}}
-                        </p>
-                    </li>
-                   @endforeach
-                </ul>
-            </div>
-            <div class="fl w380 mr40">
-                @if(isset($fnew))<a href="/news/{{$fnew->id}}/" class="img-block magnify magnify-txt h253 pr"><img src="{{$fnew->litpic}}" alt="{{$fnew->title}}"><div class="img-bg"></div><p>{{$fnew->title}}</p></a>@endif
-                <ul class="gl-list mt40">
-                    <li class="mr20 mb20"><a href="/bnlist/"><i class="icon-all i-a22"></i><h3>品牌新闻</h3></a></li>
-                    <li class="mb20"><a href="/nlist/1/"><i class="icon-all i-a23"></i><h3>加盟指南</h3></a></li>
-                    <li class="mr20"><a href="/nlist/2/"><i class="icon-all i-a24"></i> <h3>投资分析</h3></a></li>
-                    <li><a href="/nlist/4/"><i class="icon-all i-a25"></i><h3>经营管理</h3></a></li>
-                </ul>
-            </div>
-            <div class="fr w380">
-                        <dl class="wz-list">
-                            @foreach($zhinannews as $zhinannew)
-                                @if($loop->first)
-                                <dt>
-                                    <p class="f24">
-                                        <a href="/news/{{$zhinannew->id}}/" class="s-oe">{{$zhinannew->title}}</a>
-                                    </p>
-                                    <p class="f14 s-8c">{{$zhinannew->description}}<a href="/news/{{$zhinannew->id}}/" class="s-c59">详细&gt;&gt;</a>
-                                    </p>
-                                </dt>
-                                @else
-                                <dd><span class="fr s-8c ml20">{{date('Y-m-d',strtotime($zhinannew->created_at))}}</span><a href="/news/{{$zhinannew->id}}/">{{$zhinannew->title}}</a></dd>
-                                @endif
-                            @endforeach
-                        </dl>
-                <div class="nav-h30 nav-h30-line-oe mt30">
-                    <h3 class="f22">创业大讲堂</h3>
-                </div>
-                <dl class="wz-list mt25">
-                    @foreach($jingyingnews as $jingyingnew)
-                    <dd><span class="fr s-8c ml20">{{date('Y-m-d',strtotime($jingyingnew->created_at))}}</span><a href="/news/{{$jingyingnew->id}}/">{{$jingyingnew->title}}</a></dd>
-                    @endforeach
-                </dl>
-            </div>
-            <div style="clear: both"></div>
-        </div>
-
-        <div class="brands ysbh">
-            <div class="conta">
-                <div class="clearfix">
-                    <div class="content f-l">
-                        <div class="fine-left-top clearfix">
-                            <h4 class="f-l">友情链接</h4>
-                        </div>
-                        <div class="fine-left-bottom clearfix">
-                            <ul class="yqlj_item">
-                                @foreach($flinks as $flink)
-                                <li><a href="{{$flink->wenurl}}" target="_blank"><i></i><b>{{$flink->webname}}</b></a></li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div style="clear: both"></div>
-            </div>
-        </div>
-    </div>
-    <!--文档end-->
-
-    <!-- /main -->
-@stop
-@section('footerlibs')
-
-@stop
+    <img src="/frontend/images/9.png" alt="">
+</div>
+</body>
+</html>
