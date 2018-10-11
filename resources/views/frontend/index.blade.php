@@ -67,6 +67,7 @@
                                     <li class="img-block cur"><img src="http://www.xiuxianshipin.com/public/images/upload/2015/10/23/ff26c9e93d24195bfa87cd9403732398.jpg" alt=""></li>
                                     <li class="img-block cur"><img src="http://www.xiuxianshipin.com/public/images/upload/2015/10/23/dc3e2502986ac850b3e3813ffbc53e6d.jpg" alt=""></li>
                                     <li class="img-block cur"><img src="http://www.xiuxianshipin.com/public/images/upload/2015/10/23/9e26e4e5e0eb9cfbc8e801484398a874.jpg" alt=""></li>
+                                    <li class="img-block cur"><img src="http://www.xiuxianshipin.com/public/images/upload/2015/10/23/9e26e4e5e0eb9cfbc8e801484398a874.jpg" alt=""></li>
                                 </ul>
                             </div>
                         </div>
@@ -102,7 +103,7 @@
                             <li style=" margin-left:35px">品牌好评率 <span class="price">97%</span></li>
                         </ul>
                     </div>
-                    <div class="fx-z-h48 mt20">
+                    <div class="fx-z-h48">
                         <a href="#wyjm" class="btn btn-oe">申请加盟</a>
                         <div class="btn btn-zan ct"><i class="iconfont icon-like"></i><span>2629</span></div>
                         <div class="btn btn-Share ico-quoted"><i class="iconfont icon-Share"></i>成本计算</div>
@@ -709,5 +710,6 @@
 </footer>
 <script type="text/javascript" src="/frontend/js/jquery.min.js"></script>
 <script type="text/javascript" src="/frontend/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/frontend/js/frontend.js"></script>
 </body>
 </html>
