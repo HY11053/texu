@@ -6,17 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <meta name="renderer" content="webkit" />
     <meta name="author" content="leslie" />
-    <title>北京蓝箭空间科技有限公司_张昌武【工商信息_电话地址_注册信息_信用信息_财务信息】查询_企查查</title>
-    <meta name="keywords" content="北京蓝箭空间科技有限公司,北京蓝箭空间科技有限公司工商信息,北京蓝箭空间科技有限公司招聘,北京蓝箭空间科技有限公司地址电话,北京蓝箭空间科技有限公司怎么样,北京蓝箭空间科技有限公司工资待遇,北京蓝箭空间科技有限公司信用信息" />
-    <meta name="description" content="北京蓝箭空间科技有限公司怎么样？企查查为您提供北京蓝箭空间科技有限公司的最新工商信息、诉讼信息、电话号码、招聘信息、公司简介、公司地址、公司规模、信用信息、财务信息等详细信息，让您在选择北京蓝箭空间科技有限公司前能够做到全面了解北京蓝箭空间科技有限公司的信用信息。" />
+    <title>中国特许网</title>
+    <meta name="keywords" content="中国特许网" />
+    <meta name="description" content="中国特许网" />
     <meta name="applicable-device" content="pc" />
     <link rel="alternate" media="only screen and(max-width: 640px)" href="https://m.qichacha.com/firm_8277f4ba28d6cf90cb8cc984b24677cf.html" />
     <link rel="stylesheet" href="/frontend/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="/frontend/css/font-awesome.min.css" type="text/css" />
-    <link rel="stylesheet" href="/frontend/css/icon.css" type="text/css" />
-    <link rel="stylesheet" href="/frontend/css/font.css" type="text/css" />
     <link rel="stylesheet" href="/frontend/css/app.css?time=20180930" type="text/css" />
-    <link rel="stylesheet" href="/frontend/css/app_common.css?time=20180930" type="text/css" />
     <!--[if lt IE 9]>
     <link rel="stylesheet" href="/frontend/css/app_ie8.css?time=1508428800" type="text/css" />
     <script src="/frontend/js/html5shiv.js"></script>
@@ -30,11 +26,10 @@
         <form class="navi-form" role="search" action="/search">
             <div class="form-group">
                 <div class="input-group">
-                    <input id="headerKey" name="key" onkeydown="searchKeydown(event,2);" class="form-control headerKey" style="font-size: 14px;" type="text" placeholder="请输入企业名称、人名，产品名等，多关键词用空格隔开，如“小米 雷军”" value="" autocomplete="off" />
-                    <span class="input-group-btn" style="float: left"> <button onclick="" type="submit" class="btn btn-primary top-searchbtn"></button> </span>
+                    <input id="headerKey" name="key" class="form-control headerKey" type="text" placeholder="请输入你想查询的品牌特许信息 如 一扫光休闲食品" />
+                    <span class="input-group-btn" style="float: left"> <button type="submit" class="btn btn-primary top-searchbtn"></button> </span>
                 </div>
             </div>
-            <section class="panel headerKey header-section" id="header-search-list"></section>
         </form>
         <ul class="navi-nav pull-right">
             <li>
@@ -49,9 +44,7 @@
     </div>
 </header>
 <div class="container p-t">
-    <div class="m-b-sm">
-        <a href="/" style="color: #888">首页&nbsp;&gt;</a><a href="/g_BJ" style="color: #888">北京市企业查询&nbsp;&gt;</a><a href="" style="color: #888">北京蓝箭空间科技有限公司</a>
-    </div>
+    <div class="m-b-sm"><a href="/">首页&nbsp;&gt;</a><a href="/g_BJ">北京市企业查询&nbsp;&gt;</a><a href="h" >北京蓝箭空间科技有限公司</a></div>
     <div class="panel padder n-s nheader b-a" id="company-top">
         <div class="brand_info ">
             <div class="brandpics">
@@ -148,131 +141,107 @@
     <div class="row">
         <div class="col-sm-9 no-padding-right">
             <header style="height: 44px;position: relative;">
-                <div class="company-nav " style="overflow: hidden;">
-                    <div class="company-nav-tab current">
-                        <a class="company-nav-head"><h2>特许经营信息</h2></a>
-                    </div>
-                    <div class="company-nav-tab">
-                        <a class="company-nav-head"><h2>品牌介绍</h2></a>
-                    </div>
-                    <div class="company-nav-tab">
-                        <a class="company-nav-head"><h2>品牌展示</h2></a>
-                    </div>
-                    <div class="company-nav-tab">
-                        <a class="company-nav-head"><h2>投资分析</h2></a>
-                    </div>
-                    <div class="company-nav-tab">
-                        <a class="company-nav-head"><h2>品牌资讯</h2></a>
-                    </div>
-                    <div class="company-nav-tab">
-                        <a class="company-nav-head"><h2>品牌门店</h2></a>
-                    </div>
-                    <div class="company-nav-tab">
-                        <a class="company-nav-head"><h2>项目咨询</h2></a>
-                    </div>
+                <div class="company-nav ">
+                    <div class="company-nav-tab current"><a class="company-nav-head"><h2>特许经营信息</h2></a></div>
+                    <div class="company-nav-tab"><a class="company-nav-head"><h2>品牌介绍</h2></a></div>
+                    <div class="company-nav-tab"><a class="company-nav-head"><h2>品牌展示</h2></a></div>
+                    <div class="company-nav-tab"><a class="company-nav-head"><h2>投资分析</h2></a></div>
+                    <div class="company-nav-tab"> <a class="company-nav-head"><h2>品牌资讯</h2></a></div>
+                    <div class="company-nav-tab"><a class="company-nav-head"><h2>品牌门店</h2></a></div>
+                    <div class="company-nav-tab"><a class="company-nav-head"><h2>项目咨询</h2></a></div>
                 </div>
             </header>
             <div class="data_div_login">
                 <section class="panel b-a base_info mt0" id="Cominfo">
-                    <div class="tcaption">
-                        <h3 class="title">三只松鼠特许公示信息</h3>
-                    </div>
-                    <div class="prot-gltu" id="protGltu"></div>
+                    <div class="tcaption"><h3 class="title">三只松鼠特许公示信息</h3></div>
                     <table class="ntable">
                         <tbody>
-                        <tr>
-                            <td width="20%" class="tb">品牌名称：</td>
-                            <td width="30%" class=""> 三只松鼠 </td>
-                            <td width="20%" class="tb">特许备案号：</td>
-                            <td width="30%" class=""> 0111500111800050 </td>
-                        </tr>
-                        <tr>
-                            <td class="tb">特许品牌：</td>
-                            <td class=""> 三只松鼠 </td>
-                            <td class="tb" width="18%">备案公告时间	：</td>
-                            <td class=""> 2018-09-20 </td>
-                        </tr>
-                        <tr>
-                            <td class="tb">统一社会信用代码：</td>
-                            <td class=""> 91110108344314759F </td>
-                            <td class="tb">纳税人识别号：</td>
-                            <td class=""> 91110108344314759F </td>
-                        </tr>
-                        <tr>
-                            <td class="tb">注册号：</td>
-                            <td class=""> 110108019216937 </td>
-                            <td class="tb" width="15%">组织机构代码：</td>
-                            <td class=""> 34431475-9 </td>
-                        </tr>
-                        <tr>
-                            <td class="tb">公司类型：</td>
-                            <td class=""> 有限责任公司(自然人投资或控股) </td>
-                            <td class="tb">所属行业：</td>
-                            <td class=""> 科学研究和技术服务业 </td>
-                        </tr>
-                        <tr>
-                            <td class="tb">投资金额：</td>
-                            <td class="" style="max-width:301px;"> ￥3万以下 </td>
-                            <td class="tb">门店数：</td>
-                            <td class=""> 3316 </td>
-                        </tr>
-                        <tr>
-                            <td class="tb">店铺所需面积：</td>
-                            <td class="" style="max-width:301px;"> 10-30平米</td>
-                            <td class="tb">品牌发源地：</td>
-                            <td class=""> 芜湖 </td>
-                        </tr>
-                        <tr>
-                            <td class="tb"> 申请加盟 </td>
-                            <td class=""> 669人</td>
-                            <td class="tb"> 意向加盟 </td>
-                            <td class=""> 1505 </td>
-                        </tr>
-                        <tr>
-                            <td class="tb"> 公司名称 </td>
-                            <td class=""> 三只松鼠有限公司 </td>
-                            <td class="tb"> 注册资金 </td>
-                            <td class=""> 5000万</td>
+                            <tr>
+                                <td width="20%" class="tb">品牌名称：</td>
+                                <td width="30%" class=""> 三只松鼠 </td>
+                                <td width="20%" class="tb">特许备案号：</td>
+                                <td width="30%" class=""> 0111500111800050 </td>
+                            </tr>
+                            <tr>
+                                <td class="tb">特许品牌：</td>
+                                <td class=""> 三只松鼠 </td>
+                                <td class="tb" width="18%">备案公告时间	：</td>
+                                <td class=""> 2018-09-20 </td>
+                            </tr>
+                            <tr>
+                                <td class="tb">统一社会信用代码：</td>
+                                <td class=""> 91110108344314759F </td>
+                                <td class="tb">纳税人识别号：</td>
+                                <td class=""> 91110108344314759F </td>
+                            </tr>
+                            <tr>
+                                <td class="tb">注册号：</td>
+                                <td class=""> 110108019216937 </td>
+                                <td class="tb" width="15%">组织机构代码：</td>
+                                <td class=""> 34431475-9 </td>
+                            </tr>
+                            <tr>
+                                <td class="tb">公司类型：</td>
+                                <td class=""> 有限责任公司(自然人投资或控股) </td>
+                                <td class="tb">所属行业：</td>
+                                <td class=""> 科学研究和技术服务业 </td>
+                            </tr>
+                            <tr>
+                                <td class="tb">投资金额：</td>
+                                <td class="" style="max-width:301px;"> ￥3万以下 </td>
+                                <td class="tb">门店数：</td>
+                                <td class=""> 3316 </td>
+                            </tr>
+                            <tr>
+                                <td class="tb">店铺所需面积：</td>
+                                <td class="" style="max-width:301px;"> 10-30平米</td>
+                                <td class="tb">品牌发源地：</td>
+                                <td class=""> 芜湖 </td>
+                            </tr>
+                            <tr>
+                                <td class="tb"> 申请加盟 </td>
+                                <td class=""> 669人</td>
+                                <td class="tb"> 意向加盟 </td>
+                                <td class=""> 1505 </td>
+                            </tr>
+                            <tr>
+                                <td class="tb"> 公司名称 </td>
+                                <td class=""> 三只松鼠有限公司 </td>
+                                <td class="tb"> 注册资金 </td>
+                                <td class=""> 5000万</td>
 
-                        </tr>
-                        <tr>
-                            <td class="tb"> 加盟人群 </td>
-                            <td class=""> 工薪阶层、80后、白领、自由职业者、 </td>
-                            <td class="tb"> 加盟区域 </td>
-                            <td class=""> 威海、安阳、潮州、宜昌、绥化、 等全国地区</td>
+                            </tr>
+                            <tr>
+                                <td class="tb"> 加盟人群 </td>
+                                <td class=""> 工薪阶层、80后、白领、自由职业者、 </td>
+                                <td class="tb"> 加盟区域 </td>
+                                <td class=""> 威海、安阳、潮州、宜昌、绥化、 等全国地区</td>
 
-                        </tr>
-                        <tr>
-                            <td class="tb">企业地址：</td>
-                            <td class="" > 安徽省芜湖市弋江区高新开发区南区龙华厂房</td>
-                            <td class="tb">经营范围：</td>
-                            <td class=""> 中式餐饮，西式餐饮，凉菜制作，烧烤熟肉</td>
-                        </tr>
-
+                            </tr>
+                            <tr>
+                                <td class="tb">企业地址：</td>
+                                <td class="" > 安徽省芜湖市弋江区高新开发区南区龙华厂房</td>
+                                <td class="tb">经营范围：</td>
+                                <td class=""> 中式餐饮，西式餐饮，凉菜制作，烧烤熟肉</td>
+                            </tr>
                         </tbody>
                     </table>
                 </section>
                 <section class="panel b-a" id="Comintroduce">
                     <div class="tcaption">
                         <h3 class="title">三只松鼠品牌介绍</h3>
-                        <span class="watermark"></span>
                     </div>
-                    <div class="" style="width:100%;margin: 0 auto;">
-                        <div style="padding: 0px;">
-                            <div class="col col-12  col-last txt-left" >
-                                <div class="det-jies">
-                                    <p>
-                                        三只松鼠是安徽三只松鼠电子商务有限公司旗下品牌，于2012年创业，为广大消费者提供各种坚果、干果、茶叶等等，产品美味、健康、营养、时尚，深得广大消费者的喜爱和信赖，目前，产品已经销往全国各个地区和城市，建立了比较完善的销售网络。</p><p style="text-align: center;"><img title="三只松鼠" src="http://www.xiuxianshipin.com/public/images/upload/2015/10/23/237e201a4c15f010074c9a767af7c437.jpg" alt="三只松鼠" align="" height="275" width="398"> </p><p>
-                                        三只松鼠，经历了有无到有，有小到大的历程，目前，已经全面覆盖天猫、淘宝、京东、1号店、QQ网购、美团、唯品会、聚美优品等各类渠道，并已建成全国华南、华北、华东、西南四大物流中心，可实现日处理订单量10万单，并实现全国60%区域的消费者次日达极速物流服务。</p><p>
-                                        三只松鼠，2012年4月获得美国IDG资本150万美元的天使投资，2012年4月获得美国IDG资本150万美元的天使投资， 2014年3月IDG资本、今日资本追加1亿元人民币C轮投资，2015年9月三只松鼠获峰瑞资本3亿人民币D轮投资，资金实力比较雄厚，发展速度也比较快速，公司市值超过40亿人民币。</p><p>
-                                        三只松鼠加盟项目为广大投资创业者带来了一个比较平坦的投资创业平台，项目实力雄厚，优势也比较多，选择投资加盟该项目，创业者可以轻松获得成功，赚取到大量的金钱！</p>
-                                    <h2 class="title">三只松鼠公司简介：</h2>
-                                    <p style="white-space: normal;">安徽三只松鼠电子商务有限公司，于2012年2月在安徽芜湖国家高新区注册成立，是中国家定位于纯互联网食品品牌的企业，也是当前中国销售规模大的食品电商企业，初是由5名创始团队组建，到目前公司全国雇员超过1700余人，其中来自全国的电商运营团队500余人，平均年龄24岁，是全国年轻的电商团队。</p><p style="white-space: normal;">公司创始人兼CEO章燎原先生，10年草根创业，10年传统行业营销、管理从业经历，4年互联网品牌营销、管理经验，在电商界人称“松鼠老爹_章三疯”，属于实战派、革命派的草根战略营销者，擅长细分品牌定位、蓝海市场开拓、互联网品牌打造。目前，已经将旗下品牌——三只松鼠的销售网络覆盖天猫、淘宝、京东、1号店、QQ网购、美团、唯品会、聚美优品等各类渠道，并已建成全国华南、华北、华东、西南四大物流中心，可实现日处理订单量10万单，并实现全国60%区域的消费者次日达极速物流服务。</p><p style="white-space: normal;">公司发展历程：</p><p style="white-space: normal;">2012年（创业年）：2012年2月，由五名创业初始团队在安徽芜湖都宝小区创立三只松鼠品牌——2012年2月，由五名创业初始团队在安徽芜湖都宝小区创立三只松鼠品牌。</p><p style="white-space: normal;">2013年（发展年）：2013年1月，月销售额突破2200万，位列全网食品销售——2013年12，全网年销售突破3.26亿元。</p><p style="white-space: normal;">2014年（地基年）：2014年1月，月度销售额突破1.6亿元，松鼠再次发生第二次危机，做出向主人的赔付政策，累计赔付81万元，全员参与危机战斗，再次演绎了松鼠价值观的强大—— 2014年12月12日，全网年销售额突破10亿元。</p><p style="white-space: normal;">2015年（变革年）：2015年2月，三只松鼠年货销售额达7.35亿元 ——2015年9月，三只松鼠获峰瑞资本3亿人民币D轮投资，松鼠公司市值超过40亿人民币。</p>
-                                    <h2 class="title" style="white-space: normal;">三只松鼠加盟流程：</h2>
-                                    <p style="white-space: normal;">1、投资咨询：投资者以电话、传真、网上留言等方式向三只松鼠总部专业的投资顾问咨询相关合作事项，索取有关资料。</p><p style="white-space: normal;">2、实地考察：投资者到三只松鼠总部所在地进行项目考察，并与三只松鼠总部工作人员进行业务交流。</p><p style="white-space: normal;">3、资格审核：三只松鼠总部对投资者进行审核，确认投资者的合作资格。</p><p style="white-space: normal;">4、签订合同：双方确认考察结果无争议，正式签订合同。</p><p style="white-space: normal;">5、缴纳费用：投资者按所选择的投资类型向三只松鼠总部交纳相关的费用。</p><p style="white-space: normal;">6、三只松鼠总部培训：三只松鼠总部安排投资者进行技术培训，培训合格后颁发授权铜牌。</p><p style="white-space: normal;">7、店面装修：三只松鼠总部为加盟者提供装修指导，与设计指导。</p><p style="white-space: normal;">8、开业：三只松鼠总部持续关注加盟者的经营情况，并给予经营指导与帮助。</p><h2 style="white-space: normal;">三只松鼠市场分析：</h2><p style="white-space: normal;">三只松鼠，产品种类丰富，质量高，价格实惠，深受广大消费者的喜爱，在市场上有着良好的口碑，目前，在市场上也已经形成了比较完善的销售网络，被全国各个地区的消费者所接受，在市场上也形成了比较可观的需求量，给选择加盟该项目的创业者带去了巨额财富。</p><p style="white-space: normal;">投资三只松鼠加盟项目，总部会为创业者提供直接的供货方式，减少商品配送过程中的中间环节，降低了商品成本，让加盟店内的产品售价更低，给广大消费者带来更加物美价廉的产品，赢得了广大消费者的认可，选择前来光临的消费者的数量十分的庞大。</p><p style="white-space: normal;">三只松鼠加盟，投资小、利润高、风险低，创业者挑选创业项目时的理想选择。想投资创业的朋友，选择了加盟该项目，那么，他们的财富梦想都将会得到实现。</p>
-                                </div>
-                            </div>
-
+                    <div class="col col-12  col-last txt-left" >
+                        <div class="det-jies">
+                            <p>
+                                三只松鼠是安徽三只松鼠电子商务有限公司旗下品牌，于2012年创业，为广大消费者提供各种坚果、干果、茶叶等等，产品美味、健康、营养、时尚，深得广大消费者的喜爱和信赖，目前，产品已经销往全国各个地区和城市，建立了比较完善的销售网络。</p><p style="text-align: center;"><img title="三只松鼠" src="http://www.xiuxianshipin.com/public/images/upload/2015/10/23/237e201a4c15f010074c9a767af7c437.jpg" alt="三只松鼠" align="" height="275" width="398"> </p><p>
+                                三只松鼠，经历了有无到有，有小到大的历程，目前，已经全面覆盖天猫、淘宝、京东、1号店、QQ网购、美团、唯品会、聚美优品等各类渠道，并已建成全国华南、华北、华东、西南四大物流中心，可实现日处理订单量10万单，并实现全国60%区域的消费者次日达极速物流服务。</p><p>
+                                三只松鼠，2012年4月获得美国IDG资本150万美元的天使投资，2012年4月获得美国IDG资本150万美元的天使投资， 2014年3月IDG资本、今日资本追加1亿元人民币C轮投资，2015年9月三只松鼠获峰瑞资本3亿人民币D轮投资，资金实力比较雄厚，发展速度也比较快速，公司市值超过40亿人民币。</p><p>
+                                三只松鼠加盟项目为广大投资创业者带来了一个比较平坦的投资创业平台，项目实力雄厚，优势也比较多，选择投资加盟该项目，创业者可以轻松获得成功，赚取到大量的金钱！</p>
+                            <h2 class="title">三只松鼠公司简介：</h2>
+                            <p style="white-space: normal;">安徽三只松鼠电子商务有限公司，于2012年2月在安徽芜湖国家高新区注册成立，是中国家定位于纯互联网食品品牌的企业，也是当前中国销售规模大的食品电商企业，初是由5名创始团队组建，到目前公司全国雇员超过1700余人，其中来自全国的电商运营团队500余人，平均年龄24岁，是全国年轻的电商团队。</p><p style="white-space: normal;">公司创始人兼CEO章燎原先生，10年草根创业，10年传统行业营销、管理从业经历，4年互联网品牌营销、管理经验，在电商界人称“松鼠老爹_章三疯”，属于实战派、革命派的草根战略营销者，擅长细分品牌定位、蓝海市场开拓、互联网品牌打造。目前，已经将旗下品牌——三只松鼠的销售网络覆盖天猫、淘宝、京东、1号店、QQ网购、美团、唯品会、聚美优品等各类渠道，并已建成全国华南、华北、华东、西南四大物流中心，可实现日处理订单量10万单，并实现全国60%区域的消费者次日达极速物流服务。</p><p style="white-space: normal;">公司发展历程：</p><p style="white-space: normal;">2012年（创业年）：2012年2月，由五名创业初始团队在安徽芜湖都宝小区创立三只松鼠品牌——2012年2月，由五名创业初始团队在安徽芜湖都宝小区创立三只松鼠品牌。</p><p style="white-space: normal;">2013年（发展年）：2013年1月，月销售额突破2200万，位列全网食品销售——2013年12，全网年销售突破3.26亿元。</p><p style="white-space: normal;">2014年（地基年）：2014年1月，月度销售额突破1.6亿元，松鼠再次发生第二次危机，做出向主人的赔付政策，累计赔付81万元，全员参与危机战斗，再次演绎了松鼠价值观的强大—— 2014年12月12日，全网年销售额突破10亿元。</p><p style="white-space: normal;">2015年（变革年）：2015年2月，三只松鼠年货销售额达7.35亿元 ——2015年9月，三只松鼠获峰瑞资本3亿人民币D轮投资，松鼠公司市值超过40亿人民币。</p>
+                            <h2 class="title" style="white-space: normal;">三只松鼠加盟流程：</h2>
+                            <p style="white-space: normal;">1、投资咨询：投资者以电话、传真、网上留言等方式向三只松鼠总部专业的投资顾问咨询相关合作事项，索取有关资料。</p><p style="white-space: normal;">2、实地考察：投资者到三只松鼠总部所在地进行项目考察，并与三只松鼠总部工作人员进行业务交流。</p><p style="white-space: normal;">3、资格审核：三只松鼠总部对投资者进行审核，确认投资者的合作资格。</p><p style="white-space: normal;">4、签订合同：双方确认考察结果无争议，正式签订合同。</p><p style="white-space: normal;">5、缴纳费用：投资者按所选择的投资类型向三只松鼠总部交纳相关的费用。</p><p style="white-space: normal;">6、三只松鼠总部培训：三只松鼠总部安排投资者进行技术培训，培训合格后颁发授权铜牌。</p><p style="white-space: normal;">7、店面装修：三只松鼠总部为加盟者提供装修指导，与设计指导。</p><p style="white-space: normal;">8、开业：三只松鼠总部持续关注加盟者的经营情况，并给予经营指导与帮助。</p><h2 style="white-space: normal;">三只松鼠市场分析：</h2><p style="white-space: normal;">三只松鼠，产品种类丰富，质量高，价格实惠，深受广大消费者的喜爱，在市场上有着良好的口碑，目前，在市场上也已经形成了比较完善的销售网络，被全国各个地区的消费者所接受，在市场上也形成了比较可观的需求量，给选择加盟该项目的创业者带去了巨额财富。</p><p style="white-space: normal;">投资三只松鼠加盟项目，总部会为创业者提供直接的供货方式，减少商品配送过程中的中间环节，降低了商品成本，让加盟店内的产品售价更低，给广大消费者带来更加物美价廉的产品，赢得了广大消费者的认可，选择前来光临的消费者的数量十分的庞大。</p><p style="white-space: normal;">三只松鼠加盟，投资小、利润高、风险低，创业者挑选创业项目时的理想选择。想投资创业的朋友，选择了加盟该项目，那么，他们的财富梦想都将会得到实现。</p>
                         </div>
                     </div>
                 </section>
@@ -287,52 +256,49 @@
                     </h2>
                     <table class="ntable ntable-odd" cellspacing="0" style="border-top: 1px solid rgb(230, 230, 230);">
                         <tbody>
-                        <tr>
-                            <td class="td_color">品牌名称</td>
-                            <td class="td_style">公主驾到</td>
-                            <td class="td_color">装修费用</td>
-                            <td class="td_style">49929</td>
-                        </tr>
-                        <tr>
-                            <td class="td_color">前两季度房租</td>
-                            <td class="td_style">2216</td>
-                            <td class="td_color">货铺/设备费用</td>
-                            <td class="td_style">13417</td>
-                        </tr>
-                        <tr>
-                            <td class="td_color">流动资金</td>
-                            <td class="td_style">20000</td>
-                            <td class="td_color">人工开支</td>
-                            <td class="td_style">2378</td>
-                        </tr>
-                        <tr>
-                            <td class="td_color">工商税务杂项</td>
-                            <td class="td_style">2605</td>
-                            <td class="td_color">水电煤(元/月)</td>
-                            <td class="td_style">448</td>
+                            <tr>
+                                <td class="td_color">品牌名称</td>
+                                <td class="td_style">公主驾到</td>
+                                <td class="td_color">装修费用</td>
+                                <td class="td_style">49929</td>
+                            </tr>
+                            <tr>
+                                <td class="td_color">前两季度房租</td>
+                                <td class="td_style">2216</td>
+                                <td class="td_color">货铺/设备费用</td>
+                                <td class="td_style">13417</td>
+                            </tr>
+                            <tr>
+                                <td class="td_color">流动资金</td>
+                                <td class="td_style">20000</td>
+                                <td class="td_color">人工开支</td>
+                                <td class="td_style">2378</td>
+                            </tr>
+                            <tr>
+                                <td class="td_color">工商税务杂项</td>
+                                <td class="td_style">2605</td>
+                                <td class="td_color">水电煤(元/月)</td>
+                                <td class="td_style">448</td>
 
-                        </tr>
-                        <tr>
-                            <td class="td_color">日成交量</td>
-                            <td class="td_style">87</td>
-                            <td class="td_color">平均单价</td>
-                            <td class="td_style">84</td>
-
-                        </tr>
-                        <tr>
-                            <td class="td_color">日均成本</td>
-                            <td class="td_style">215</td>
-                            <td class="td_color">日均收入</td>
-                            <td class="td_style">7355</td>
-                        </tr>
-                        <tr>
-                            <td class="td_color">月收入</td>
-                            <td class="td_style">22.065万</td>
-                            <td class="td_color">年收入</td>
-                            <td class="td_style">268.4575万</td>
-
-                        </tr>
-
+                            </tr>
+                            <tr>
+                                <td class="td_color">日成交量</td>
+                                <td class="td_style">87</td>
+                                <td class="td_color">平均单价</td>
+                                <td class="td_style">84</td>
+                            </tr>
+                            <tr>
+                                <td class="td_color">日均成本</td>
+                                <td class="td_style">215</td>
+                                <td class="td_color">日均收入</td>
+                                <td class="td_style">7355</td>
+                            </tr>
+                            <tr>
+                                <td class="td_color">月收入</td>
+                                <td class="td_style">22.065万</td>
+                                <td class="td_color">年收入</td>
+                                <td class="td_style">268.4575万</td>
+                            </tr>
                         </tbody>
                     </table>
 
@@ -408,8 +374,7 @@
         <div class="col-sm-3 m_rightPanels">
             <div class="panel b-a n-s" id="fapiao-title">
                 <div class="panel-heading b-b"><span class="font-bold font-15 text-dark"><h2>零食品牌排行榜</h2></span></div>
-                <div class="">
-                    <dl class="rank-bar mr30" style="margin-top: 0px; margin-bottom: 20px;">
+                <dl class="rank-bar mr30" style="margin-top: 0px; margin-bottom: 20px;">
                         <dd class="">
                             <div class="item">
                                 <i class="icon-all  i-a30">1</i>
@@ -531,7 +496,6 @@
                             </div>
                         </dd>
                     </dl>
-                </div>
             </div>
             <div class="panel b-a n-s">
                 <div class="panel-heading b-b">
@@ -589,14 +553,12 @@
                             <p class="f14">门店总数：<span class="s-oe">200</span>
                             </p>
                         </li>
-
                     </ul>
-
                 </div>
             </div>
             <section class="panel b-a n-s">
                 <div class="panel-heading b-b">
-                    <span class="font-bold font-15 text-dark"><h2>您可能感兴趣的公司</h2></span>
+                    <span class="font-bold font-15 text-dark"><h2>零食店加盟品牌资讯</h2></span>
                 </div>
                 <ul class="list-group no-bg auto">
                     <a onclick="zhugeTrack('企业主页-您可能感兴趣的公司',{'公司名称':'罗山县男孩女孩童装柜组'});" href="/firm_7e3d2b2bc6766334f264e36bbd5eb889" class="list-group-item clearfix"> <span class="clear"> <span>罗山县男孩女孩童装柜组</span><br /> </span> </a>
@@ -608,8 +570,7 @@
             </section>
             <section class="panel b-a n-s">
                 <div class="panel-heading b-b">
-                    <span class="font-bold font-15 text-dark"><h2>最新动态</h2></span>
-                    <a class="pull-right v3e_more" href="/cjob_8277f4ba28d6cf90cb8cc984b24677cf" id="job_title" tabid="job">查看更多&gt;</a>
+                    <span class="font-bold font-15 text-dark"><h2>全站最新品牌资讯</h2></span>
                 </div>
                 <ul class="list-group no-bg auto">
                     <a href="/postnews_fcbcc9240d0084a1ba04e2b43e26e63a.html" target="_blank" class="list-group-item clearfix"> <span class="clear"> <span>王前进调研“朱雀一号”运载火箭出厂前准备工作</span> </span> <span class="text-muted text-xs"><i class="i i-clock"></i> 2018-10-09</span> <span class="pull-right text-muted text-xs" style="padding: 4px">西安区县新闻网</span> </a>
@@ -698,11 +659,6 @@
                         <a href="http://www.miibeian.gov.cn/" target="_blank"> 苏ICP备15042526号-4</a> 版权所有&nbsp;苏州朗动网络科技有限公司 &nbsp;增值电信业务经营许可证：
                         <a href="http://jscainfo.miitbeian.gov.cn/state/outPortal/loginPortal.action" rel="nofollow" target="_blank">苏ICP证B2-20180251</a>
                     </div>
-                </div>
-                <div class="auth">
-                    <a href="https://ss.knet.cn/verifyseal.dll?sn=e17091132050068868mhtm000000&amp;comefrom=trust" rel="nofollow" target="_blank"> <img class="m-l-sm" style="width: 128px" src="/frontend/images/dependable.png" /> </a>
-                    <a href="http://www.jsdsgsxt.gov.cn/mbm/entweb/elec/certView.shtml?siteId=2f2c5b85a5154355a56eb3dee98ad8a3" rel="nofollow" target="_blank"> <img class="m-l-sm" style="width: 50px" src="/frontend/images/jsdsgsxt.png" /> </a>
-                    <a href="https://v.pinpaibao.com.cn/cert/site/?site=www.qichacha.com&amp;at=official" rel="nofollow" target="_blank"> <img class="m-l-sm" style="width: 124px;" src="https://static.anquan.org/static/outer/image/gw_124x47.png" /> </a>
                 </div>
             </div>
         </div>

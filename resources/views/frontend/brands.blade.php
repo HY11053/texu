@@ -12,11 +12,7 @@
     <meta name="applicable-device" content="pc" />
     <link rel="alternate" media="only screen and(max-width: 640px)" href="https://m.qichacha.com/firm_8277f4ba28d6cf90cb8cc984b24677cf.html" />
     <link rel="stylesheet" href="/frontend/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="/frontend/css/font-awesome.min.css" type="text/css" />
-    <link rel="stylesheet" href="/frontend/css/icon.css" type="text/css" />
-    <link rel="stylesheet" href="/frontend/css/font.css" type="text/css" />
     <link rel="stylesheet" href="/frontend/css/app.css?time=20180930" type="text/css" />
-    <link rel="stylesheet" href="/frontend/css/app_common.css?time=20180930" type="text/css" />
     <!--[if lt IE 9]>
     <link rel="stylesheet" href="/frontend/css/app_ie8.css?time=1508428800" type="text/css" />
     <script src="/frontend/js/html5shiv.js"></script>
@@ -528,45 +524,45 @@
                     <a target="_blank" href="/blist/all/" class="fr s-c999">更多</a>
                     <h3 class="f22">品牌招商热门加盟项目</h3>
                 </div>
-                <ul class="join-project mt30">
+                <ul class="join-project mt30 brand_list">
                     <li>
-                        <a target="_blank" href="/brand/1296/" class="img-block magnify"><img src="/public/images/upload/2017/04/25/a2cde895677a7ede4af63eaeed98d999.jpg" alt="李雷与韩梅梅"></a>
+                        <a target="_blank" href="/brand/1296/" class="img-block magnify"><img src="http://www.xiuxianshipin.com/public/images/upload/2017/04/25/a2cde895677a7ede4af63eaeed98d999.jpg" alt="李雷与韩梅梅"></a>
                         <p class="f16"><a target="_blank" href="/brand/1296/">李雷与韩梅梅</a></p>
                         <p class="f14">投资金额：<span class="s-oe">3万以下</span></p>
                         <p class="f14">加盟门店数：<span class="s-oe">3463</span></p>
                     </li>
                     <li>
-                        <a target="_blank" href="/brand/1235/" class="img-block magnify"><img src="/public/images/upload/2015/06/03/373abbc6cd6dd3808662963fb7a3c74e.jpg" alt="翠雪"></a>
+                        <a target="_blank" href="/brand/1235/" class="img-block magnify"><img src="http://www.xiuxianshipin.com/public/images/upload/2015/06/03/373abbc6cd6dd3808662963fb7a3c74e.jpg" alt="翠雪"></a>
                         <p class="f16"><a target="_blank" href="/brand/1235/">翠雪</a></p>
                         <p class="f14">投资金额：<span class="s-oe">3万以下</span></p>
                         <p class="f14">加盟门店数：<span class="s-oe">1341</span></p>
                     </li>
                     <li>
-                        <a target="_blank" href="/brand/1233/" class="img-block magnify"><img src="/public/images/upload/2015/05/13/3b14366c882557fb0232a4fd56a6c7c4.jpg" alt="珍子坊"></a>
+                        <a target="_blank" href="/brand/1233/" class="img-block magnify"><img src="http://www.xiuxianshipin.com/public/images/upload/2015/05/13/3b14366c882557fb0232a4fd56a6c7c4.jpg" alt="珍子坊"></a>
                         <p class="f16"><a target="_blank" href="/brand/1233/">珍子坊</a></p>
                         <p class="f14">投资金额：<span class="s-oe">3万以下</span></p>
                         <p class="f14">加盟门店数：<span class="s-oe">2949</span></p>
                     </li>
                     <li>
-                        <a target="_blank" href="/brand/1232/" class="img-block magnify"><img src="/public/images/upload/2015/05/13/31ee6cdfa186b05751d671eb89e88276.jpg" alt="赢旭"></a>
+                        <a target="_blank" href="/brand/1232/" class="img-block magnify"><img src="http://www.xiuxianshipin.com/public/images/upload/2015/05/13/31ee6cdfa186b05751d671eb89e88276.jpg" alt="赢旭"></a>
                         <p class="f16"><a target="_blank" href="/brand/1232/">赢旭</a></p>
                         <p class="f14">投资金额：<span class="s-oe">3万以下</span></p>
                         <p class="f14">加盟门店数：<span class="s-oe">2087</span></p>
                     </li>
                     <li>
-                        <a target="_blank" href="/brand/1231/" class="img-block magnify"><img src="/public/images/upload/2015/05/08/fad415eb3c356dc9b34aeedac146736d.jpg" alt="荔雅园"></a>
+                        <a target="_blank" href="/brand/1231/" class="img-block magnify"><img src="http://www.xiuxianshipin.com/public/images/upload/2015/05/08/fad415eb3c356dc9b34aeedac146736d.jpg" alt="荔雅园"></a>
                         <p class="f16"><a target="_blank" href="/brand/1231/">荔雅园</a></p>
                         <p class="f14">投资金额：<span class="s-oe">3万以下</span></p>
                         <p class="f14">加盟门店数：<span class="s-oe">2057</span></p>
                     </li>
                     <li>
-                        <a target="_blank" href="/brand/1229/" class="img-block magnify"><img src="/public/images/upload/2015/05/06/b44a16e686ad48efb97363f5e95f9e87.jpg" alt="大发"></a>
+                        <a target="_blank" href="/brand/1229/" class="img-block magnify"><img src="http://www.xiuxianshipin.com/public/images/upload/2015/05/06/b44a16e686ad48efb97363f5e95f9e87.jpg" alt="大发"></a>
                         <p class="f16"><a target="_blank" href="/brand/1229/">大发</a></p>
                         <p class="f14">投资金额：<span class="s-oe">3万以下</span></p>
                         <p class="f14">加盟门店数：<span class="s-oe">949</span></p>
                     </li>
                     <li>
-                        <a target="_blank" href="/brand/1228/" class="img-block magnify"><img src="/public/images/upload/2015/05/05/2b08399fe799246259958eb79cb66571.jpg" alt="吧吧香"></a>
+                        <a target="_blank" href="/brand/1228/" class="img-block magnify"><img src="http://www.xiuxianshipin.com/public/images/upload/2015/05/05/2b08399fe799246259958eb79cb66571.jpg" alt="吧吧香"></a>
                         <p class="f16"><a target="_blank" href="/brand/1228/">吧吧香</a></p>
                         <p class="f14">投资金额：<span class="s-oe">3万以下</span></p>
                         <p class="f14">加盟门店数：<span class="s-oe">2511</span></p>
@@ -720,5 +716,6 @@
 </footer>
 <script type="text/javascript" src="/frontend/js/jquery.min.js"></script>
 <script type="text/javascript" src="/frontend/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/frontend/js/frontend.js"></script>
 </body>
 </html>

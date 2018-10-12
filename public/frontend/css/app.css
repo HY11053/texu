@@ -160,7 +160,7 @@ li {    list-style: none;}
 .n-p-r {    padding-right: 0;}
 .company-logo {    width: 100px;    height: 101px;    display: table-cell;    *display: inline-block;    font-size: 20px;    text-align: center;    vertical-align: middle;    border: 1px solid #fafafa;}
 .company-logo img {    width: 98px;}
-#company-nav {    border: none;    margin-top: 20px;}
+#company-nav {    border: none;    margin-top: 20px; overflow: hidden;}
 #company-nav  li a {    /*        border-right:1px solid #ededed;    */    padding-top: 15px;    padding-bottom: 15px;}
 #company-nav  li a:hover {    background: #fafafa;}
 #company-nav .badge {    background: none;    color: #999;    border: 1px solid #e0e0e0;    margin-left: 10px;    border-radius: 2px;    padding: 2px 4px;    font-weight: 500;    margin-top: 3px;}
@@ -452,7 +452,7 @@ li {    list-style: none;}
     font-size: 16px;
     font-weight: bold;
     color: #555555;
-    height: 50px;
+    height: 45px;
 }
 
 .m_rightPanels .panel-heading span {
@@ -1397,6 +1397,7 @@ small.info {
 .m-b-sm {
     margin-bottom: 10px;
 }
+.m-b-sm a{color: #888;}
 
 .layout2_right { width: 307px; height: 406px; float: right; }
 .pinpai-syr {    padding: 20px   20px  10px 20px;    background-color: #f7f7f7;    position: relative}
@@ -1478,14 +1479,14 @@ small.info {
 }
 
 .rank-bar {   background-color: #fff; }
-.rank-bar dt {    height: 20px;    padding: 18px 20px;    margin-bottom: 10px}
+.rank-bar dt {    height: 50px;    padding: 18px 20px;    margin-bottom: 10px;     border-bottom: 2px solid #f5f5f5;}
 .rank-bar dt h2,.rank-bar dt h3 {    float: left;    font-size: 18px;    color: #262626; position: relative; margin: 0px;}
 .rank-bar dt span.fr {    color: #8c8c8c}
 .rank-bar dd {    height: 60px;    padding: 0 20px;    overflow: hidden;    position: relative}
 .rank-bar dd:after {    position: absolute;    left: 20px;    bottom: 0;    right: 20px;    content: '';    border-bottom: 1px solid #f5f5f5}
 .rank-bar dd:last-child:after {    border-bottom: 0}
 .rank-bar dd .item {    position: relative;    padding: 15px 0 0 47px;    *float: left}
-.rank-bar dd .item .icon-all {    position: absolute;    left: 0;    top: 11px;    color: #fff;    text-align: center;    padding-top: 5px}
+.rank-bar dd .item .icon-all {    position: absolute;    left: 0;    top: 11px;    color: #fff;    text-align: center; font-style: normal;   padding-top: 5px}
 .rank-bar dd .item .icon-all.i-a33 {    color: #595959;    top: 15px}
 .rank-bar dd .default {    line-height: 30px;    height: 30px;    overflow: hidden}
 .rank-bar dd .default .fr {    color: #8c8c8c;    margin-left: 20px}
@@ -1582,7 +1583,7 @@ ul.jm-xm-list {padding: 0px; margin: 0px;}
 .gbook .bd .btn{ width:192px; height:36px; background:#D71318; border:none; cursor:pointer; line-height:36px; color:#fff; border-radius:3px; padding:0;}
 .gbook .bd .btn:hover{background:#B01F24;}
 
-.gbook .check_msg{ width:260px; position:absolute; top:166px; left:412px;}
+.gbook .check_msg{ width:260px; position:absolute; top:166px; left:430px;}
 .gbook .check_msg .check_msg_tit{ background:#D71318; padding-left:5px; height:30px; line-height:30px; color:#fff;}
 .gbook .check_msg .check_msg_bd{ border:1px solid #CCC; border-top:none; padding:5px 0;}
 .gbook .check_msg .check_msg_bd li{ padding:0; height:26px; line-height:26px;}
@@ -1617,11 +1618,15 @@ ul.jm-xm-list {padding: 0px; margin: 0px;}
 }
 .type-sift {    padding: 17px 20px;    font: 14px/20px 'Microsoft YaHei';    color: #262626;}
 .box-shadow {    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .05);}
+.p20 {
+    padding: 20px;
+    margin-top: 20px;
+}
 .bg-ff {    background-color: #fff;}
 .type-sift dl {    min-height: 24px;    overflow: hidden;    position: relative;    padding: 5px 0 5px 80px;    margin-bottom: 0px;}
 .type-sift dt {    position: absolute;    left: 0;    top: 5px;    color: #8c8c8c;    line-height: 24px;}
 .type-sift dd a {    float: left;    padding: 0 12px;    height: 24px;    line-height: 24px;    background-color: transparent;    transition: all .15s linear;    margin: 2px;}
-.type-sift dd a:hover, .type-sift dd a.cur {    background-color: #ff552e;    color: #fff;    border-radius: 3px;}
+.type-sift dd a:hover, .type-sift dd a.cur {    background-color: #128bed;    color: #fff;    border-radius: 3px;}
 .paixu-nav {    height: 46px;    line-height: 24px;    padding: 14px 20px;}
 .paixu-nav h1 {    float: left;    font-size: 16px;    font-weight: 600;    margin-right: 15px; margin-top: 0px; margin-bottom: 0px; }
 .paixu-nav .px-btn {    float: left;}
@@ -1659,8 +1664,32 @@ ul.xm-list-H224{padding: 0px;}
 .pagination li .prev,.pagination .next {    position: relative;    top: 1px;    font-size: 18px;    font-family: "\5B8B\4F53";    font-weight: 700}
 .pagination li a.disabled {    color: #ddd}
 .s-c999 {    color: #999}
+.mt30 {    margin-top: 30px;}
+ul.brand_list{padding: 0px;}
+.join-project li {
+    margin-top: 20px;
+    overflow: hidden;
+}
+.join-project .img-block {
+    float: left;
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    overflow: hidden;
+}
+
+.join-project .f16 {
+    height: 28px;
+    line-height: 28px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.join-project .f14 {
+    color: #8c8c8c;
+    line-height: 24px;
+}
 .lh24{border-bottom: 2px solid #f5f5f5; padding-bottom: 10px; margin-bottom: 10px;}
-.lh24 h3{position: relative; }
+.lh24 h3{position: relative; font-size: 18px; margin: 0px;}
 .lh24 h3:after,.rank-bar dt h3:after {
     position: absolute;
     left: -10px;
@@ -1670,3 +1699,110 @@ ul.xm-list-H224{padding: 0px;}
     background-color: #ff552e;
     content: '';
 }
+.tw-list li {
+    padding: 15px 0;
+}
+.tw-list li .img-block {
+    float: left;
+    width: 110px;
+    height: 72px;
+    overflow: hidden;
+    margin-right: 20px;
+}
+.magnify img {
+    transition: all .35s linear;
+    transform: scale(1);
+    border-radius: 5px;
+}
+ul.tw-list{padding: 0px;}
+.tw-list li .f16 {
+    height: 25px;
+    overflow: hidden;
+}
+.tw-list li .f14 {
+    line-height: 24px;
+    max-height: 48px;
+    overflow: hidden;
+    margin-top: 9px;
+}
+.s-8c {
+    color: #8c8c8c;
+}
+/********************listarticle*******************/
+.zs-tj-bar {    height: 320px;    padding: 30px 20px}
+.img-block.w420 {    float: left;    width: 420px;    height: 280px}
+.img-block.w420 p {    font-size: 16px;    bottom: 15px}
+.tj-wz {    width: 700px}
+.tj-wz dl {}
+.tj-wz dt {    font-size: 24px;    line-height: 40px;    text-align: center;    height: 40px;    overflow: hidden}
+.tj-wz dd {    line-height: 24px;    color: #8c8c8c;    text-indent: 2em;    height: 48px;    overflow: hidden;    margin-top: 15px}
+.tj-wz ul {    margin-top: 14px}
+.tj-wz li {    float: left;    width: 320px;    padding: 0 15px;    height: 32px;    overflow: hidden;    line-height: 32px}
+.tj-wz li a {    font-size: 16px}
+.zs-tw-list {    padding: 0 20px 20px}
+.zs-tw-list li {    padding: 20px 0;    overflow: hidden}
+.zs-tw-list li .img-block {    float: left;    width: 220px;    height: 145px;    margin-right: 40px}
+.zs-tw-list li .f20 {    font-size: 20px;    line-height: 36px;    height: 36px;    overflow: hidden}
+.zs-tw-list li p {    line-height: 24px;    height: 48px;    color: #595959;    margin: 5px 0 20px;    overflow: hidden}
+.zs-tw-list li .info {    height: 20px;    color: #aaa}
+.zs-tw-list li .info span {    float: left;    margin-right: 30px}
+.zs-tw-list li .info span .iconfont {    margin: -4px 10px 0 0}
+.plr20-tb15 {
+    padding: 15px 20px;
+}
+.tu-list {}
+.tu-list dd {    float: left;    width: 135px;    height: 135px;    margin-bottom: 20px}
+.tu-list dd p {    font-size: 16px;    bottom: 10px}
+/******************************文章************************************/
+.detail-page {
+    padding: 53px 40px 0;
+    background-color: #fff;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.05);
+}
+
+.det-tit {    margin: 0 40px}
+.det-tit h1 {    font-size: 24px;    line-height: 42px;    font-weight: 600; text-align: center}
+.det-tit .info {    height: 54px;    line-height: 24px;    font-size: 12px;    color: #8c8c8c;    padding: 19px 0 14px;    border-bottom: 1px solid #f5f5f5}
+.det-tit .info span {    float: left;    margin-right: 15px}
+.det-tit .info span em {    font-style: normal}
+.det-tit .info span .iconfont {    font-size: 12px;    color: #ccc;    margin: -2px 5px 0 0; text-align: center;}
+.det-tit .tips {    color: #999;    margin-top: 20px}
+.det-tit .tips .icon-hints {    margin: -3px 10px 0 0}
+.det-nr {    padding: 35px 0px;    font-size: 14px;    line-height: 32px;    height: auto;      color: #666666;}
+.det-nr a{color: #666666; text-decoration:none;}
+.det-nr p {    text-indent: 2rem}
+.det-nr img {    max-width: 100%;    display: block; border-radius: 5px;   margin: auto}
+.det-nr h2{    font-weight: bold;    font-size: 16px;    line-height: 35px;    margin-bottom: 10px; }
+.det-nr table {    border-collapse: collapse;    border-spacing: 0;    border-top: 1px solid rgb(230, 230, 230);    width: 100%;}
+.det-nr tbody {    display: table-row-group;    vertical-align: middle;    border-color: inherit;}
+.det-nr td{    padding-top: 5px;    padding-bottom: 5px;    text-align: center;    color: rgb(85, 85, 85);    border: 1px solid rgb(230, 230, 230);    text-indent: 15px;    height: 20px;    overflow: hidden;    width: 266px;}
+.det-nr th {    padding-top: 5px;    padding-bottom: 5px;    color: rgb(85, 85, 85);    border: 1px solid rgb(230, 230, 230);    text-indent: 15px;    height: 20px;    overflow: hidden;    width: 130px;    background: rgb(249, 249, 249);}
+
+.det-zan {    width: 100px;    height: 54px;    padding-top: 10px;    border-radius: 32px;    border-color: #eee;    background-color: #eee;    text-align: center;    color: #8c8c8c;    margin: 0 auto 40px;    cursor: pointer}
+.det-zan .iconfont {    font-size: 26px;    padding-left: 6px}
+.det-zan p {    font-size: 16px;    margin-top: 6px}
+.det-zan:hover {    border-color: #eee;    background-color: #eee;    color: #8c8c8c}
+.det-zan.ct {    background-color: #fb7b5e;    border-color: #fb7b5e;    color: #fff}
+.det-zan.ct .iconfont {    animation: fdup .35s linear forwards;    color: #fff}
+@keyframes fdup {
+    0% {        transform: scale(1)    }
+    80% {        transform: scale(1.5)    }
+    100% {        transform: scale(1)    }
+}
+.detail-page .other {    border-top: 1px solid #f5f5f5;    height: 32px;    line-height: 32px;    padding: 30px 0}
+.detail-page .other .tag span,.detail-page .other .share dt {    float: left;    color: #8c8c8c;    margin-right: 5px}
+.detail-page .other .tag .btn {    float: left;    padding: 0 10px;    height: 30px;    line-height: 30px;    border-radius: 16px}
+.detail-page .other .share dt {    margin-right: 0}
+.detail-page .share dd {    float: left;    margin: 0 6px;    position: relative;    z-index: 50}
+.detail-page .share dd .ico {    width: 30px;    height: 30px;    text-align: center;    cursor: pointer;    border: 1px solid transparent;    border-radius: 50%;    transition: all .25s linear}
+.detail-page .share dd .ico .iconfont {    font-size: 20px;    margin-top: -3px}
+.detail-page .share dd .ico.wechat {    border-color: #89cf50;    color: #89cf50}
+.detail-page .share dd .ico.weibo {    border-color: #f9a094;    color: #f9a094}
+.detail-page .share dd .ico.qzone {    border-color: #f9d58b;    color: #f9d58b}
+.detail-page .share dd:hover .ico.wechat {    background-color: #89cf50;    color: #fff}
+.detail-page .share dd:hover .ico.weibo {    background-color: #f9a094;    color: #fff}
+.detail-page .share dd:hover .ico.qzone {    background-color: #f9d58b;    color: #fff}
+.detail-page .share dd .pop {    position: absolute;    left: 50%;    top: 40px;    margin-left: -70px;    display: none;    width: 110px;    padding: 20px 10px 15px;    background-color: #fff;    box-shadow: 0 1px 15px 0 rgba(0,0,0,.1);    font-size: 12px;    color: #595959;    text-align: center;    line-height: 20px}
+.detail-page .share dd .pop img {    display: block;    width: 100px;    height: 100px;    margin: auto}
+
+
